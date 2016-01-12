@@ -51,5 +51,5 @@ limitations under the License.
 
 A copy of the license is available in the repository's [license.txt]( https://raw.github.com/Esri/quickstart-map-js/master/license.txt) file.
 
-[](Esri Language: Java)
-[](Esri Language: CSharp)
+[](Esri Tags: WMX Desktop Java)
+[](Esri Language: C-Sharp)
