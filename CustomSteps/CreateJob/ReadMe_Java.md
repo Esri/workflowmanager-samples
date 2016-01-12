@@ -117,8 +117,9 @@ JTX Install Location\Developer Kit\Samples\Custom Steps\CreateJob
 
 14.  Alternatively, use the argument editor to define the step arguments.
 
-<implicit_p>![](CreateJobStep_StepTypeProps.png)*   Click Ok to save your new step type.
+<implicit_p>![](CreateJobStep_StepTypeProps.png)
+*   Click Ok to save your new step type.
 
-    *   <span style="font-family: Verdana, sans-serif; font-size: 8pt;">Add the new step type to a workflow, then open the client application and run it.</span>
+*   <span style="font-family: Verdana, sans-serif; font-size: 8pt;">Add the new step type to a workflow, then open the client application and run it.</span>
 
     </implicit_p>
