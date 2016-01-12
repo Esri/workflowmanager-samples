@@ -1,0 +1,2895 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:e="http://www.esri.com/schemas/ArcGIS/9.2" targetNamespace="http://www.esri.com/schemas/ArcGIS/9.2" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema xmlns="http://www.esri.com/schemas/ArcGIS/9.2" targetNamespace="http://www.esri.com/schemas/ArcGIS/9.2">
+      <xs:element name="CreateDatabaseVersion">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="parentVersion" type="xs:string" />
+            <xs:element name="newVersion" type="xs:string" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CreateDatabaseVersionResponse">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="GetAllDatabaseVersions">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAllDatabaseVersionsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXDatabaseVersion" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAllActivityTypes">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="GetAllActivityTypesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXActivityType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetConfigProperty">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="propertyName" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetConfigPropertyResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAllUsers">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="GetAllUsersResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXUser" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetUser">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="userName" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetUserResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:JTXUser" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetUserPrivileges">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="userName" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetUserPrivilegesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXPrivilege" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAllGroups">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="GetAllGroupsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXUserGroup" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetUserGroups">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="userName" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetUserGroupsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXUserGroup" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetGroupUsers">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="groupID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetGroupUsersResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXUser" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAllPriorities">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="GetAllPrioritiesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXPriority" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAllStatuses">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="GetAllStatusesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXStatus" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAllJobTypes">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="GetAllJobTypesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXJobTypeName" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPublicQueryContainer">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="GetPublicQueryContainerResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:JTXJobQueryContainer" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetUserQueryContainer">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="userName" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetUserQueryContainerResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:JTXJobQueryContainer" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAllHoldTypes">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="GetAllHoldTypesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXHoldType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAllDataWorkspaces">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAllDataWorkspacesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXDataWorkspaceName" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAllDataWorkspaceVersions">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="databaseID" type="xs:string" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAllDataWorkspaceVersionsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXDatabaseVersion" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddAttachment">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+            <xs:element name="filePath" type="xs:string" />
+            <xs:element name="file" type="xs:base64Binary" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddAttachmentResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddAuxRecord">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+            <xs:element name="containerName" type="xs:string" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddAuxRecordResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AssignJobsToGroup">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobIDs" type="e:ArrayOfInt" />
+            <xs:element name="groupName" type="xs:string" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AssignJobsToGroupResponse">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="AssignJobsToUser">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobIDs" type="e:ArrayOfInt" />
+            <xs:element name="userName" type="xs:string" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AssignJobsToUserResponse">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="CloseJob">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CloseJobResponse">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="CreateDependency">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="dependency" type="e:JTXJobDependency" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CreateDependencyResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CreateJobHold">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+            <xs:element name="holdTypeID" type="xs:int" />
+            <xs:element name="comments" type="xs:string" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CreateJobHoldResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CreateJobs">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="job" type="e:JTXJobDescription" />
+            <xs:element name="numJobs" type="xs:int" />
+            <xs:element name="autoCommitWorkflow" type="xs:boolean" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CreateJobsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfInt" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteAttachment">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+            <xs:element name="attachmentID" type="xs:int" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteAttachmentResponse">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="DeleteDependency">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="dependencyID" type="xs:int" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteDependencyResponse">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="DeleteJobs">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobIDs" type="e:ArrayOfInt" />
+            <xs:element name="deleteHistory" type="xs:boolean" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteJobsResponse">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="ExecuteQuery">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="query" type="e:JTXQuery" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ExecuteQueryResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ExecuteQueryByID">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="queryID" type="xs:int" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ExecuteQueryByIDResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAllJobs">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="xmlType" type="xs:int" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAllJobsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXJobDescription" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAttachmentFile">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+            <xs:element name="attachmentID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAttachmentFileResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:base64Binary" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAttachments">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAttachmentsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXAttachment" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAuxRecords">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAuxRecordsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXAuxRecordContainer" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetJobDependencies">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetJobDependenciesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXJobDependency" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetJobHolds">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetJobHoldsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXJobHold" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetJobHistory">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetJobHistoryResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXActivityRecord" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetJobIDs">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="GetJobIDsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfInt" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetJobNotes">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetJobNotesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetJobs">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobIDs" type="e:ArrayOfInt" />
+            <xs:element name="xmlType" type="xs:int" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetJobsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXJobDescription" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LogJobAction">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+            <xs:element name="activityTypeID" type="xs:int" />
+            <xs:element name="message" type="xs:string" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LogJobActionResponse">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="ReleaseJobHold">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+            <xs:element name="holdID" type="xs:int" />
+            <xs:element name="comments" type="xs:string" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReleaseJobHoldResponse">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="UnassignJobs">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobIDs" type="e:ArrayOfInt" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UnassignJobsResponse">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="UpdateAuxRecord">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+            <xs:element name="auxRecord" type="e:JTXAuxRecordDescription" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateAuxRecordResponse">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="UpdateJobNotes">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+            <xs:element name="notes" type="xs:string" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateJobNotesResponse">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="UpdateJobProperties">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="job" type="e:JTXJobDescription" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateJobPropertiesResponse">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="CreateJobVersion">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+            <xs:element name="parentVersion" type="xs:string" />
+            <xs:element name="version" type="xs:string" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CreateJobVersionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetDefaultJobDescription">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobTypeID" type="xs:int" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetDefaultJobDescriptionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:JTXJobDescription" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetChildJobIDs">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetChildJobIDsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfInt" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ExecuteAutoWorkflow">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+            <xs:element name="stepIDs" type="e:ArrayOfInt" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ExecuteAutoWorkflowResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXServerExecuteInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ExecuteSteps">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+            <xs:element name="stepIDs" type="e:ArrayOfInt" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ExecuteStepsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXServerExecuteInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAllCurrentSteps">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAllCurrentStepsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXStep" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAllJobSteps">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAllJobStepsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXStep" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetJobStep">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+            <xs:element name="stepID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetJobStepResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:JTXStep" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetJobWorkflowImage">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+            <xs:element name="imageFormat" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetJobWorkflowImageResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:base64Binary" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="MarkStepsAsDone">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+            <xs:element name="stepIDs" type="e:ArrayOfInt" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="MarkStepsAsDoneResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXServerExecuteInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ResolveConflict">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+            <xs:element name="stepID" type="xs:int" />
+            <xs:element name="optionReturnCode" type="xs:int" />
+            <xs:element name="optionSteps" type="e:ArrayOfInt" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ResolveConflictResponse">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="GetStepDescription">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+            <xs:element name="stepID" type="xs:int" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetStepDescriptionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetStepFile">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+            <xs:element name="stepID" type="xs:int" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetStepFileResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:base64Binary" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="MoveNextStep">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+            <xs:element name="stepID" type="xs:int" />
+            <xs:element name="returnCode" type="xs:int" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="MoveNextStepResponse">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="CanRunStep">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jobID" type="xs:int" />
+            <xs:element name="stepID" type="xs:int" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CanRunStepResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAllReports">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAllReportsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXReportDescription" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetReport">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="reportID" type="xs:int" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetReportResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:JTXReportDescription" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GenerateFormattedReport">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="reportID" type="xs:int" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GenerateFormattedReportResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GenerateUnformattedReport">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="reportID" type="xs:int" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GenerateUnformattedReportResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetReportStylesheet">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="reportID" type="xs:int" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetReportStylesheetResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetDatabaseTime">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="databaseID" type="xs:string" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetDatabaseTimeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:dateTime" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RunSpatialNotificationsOnHistory">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="databaseID" type="xs:string" />
+            <xs:element name="fromTime" type="xs:dateTime" />
+            <xs:element name="toTime" type="xs:dateTime" />
+            <xs:element name="logMatches" type="xs:boolean" />
+            <xs:element name="sendImmediately" type="xs:boolean" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RunSpatialNotificationsOnHistoryResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LogMatches">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="matches" type="e:ArrayOfJTXChangeRuleMatch" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LogMatchesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetLoggedMatch">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="matchID" type="xs:string" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetLoggedMatchResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:JTXChangeRuleMatch" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetSessionMatches">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="sessionID" type="xs:string" />
+            <xs:element name="caller" type="e:JTXCaller" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetSessionMatchesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="e:ArrayOfJTXChangeRuleMatch" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="NotifyLoggedMatches">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="sessionID" type="xs:string" />
+            <xs:element name="deleteAfter" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="NotifyLoggedMatchesResponse">
+        <xs:complexType />
+      </xs:element>
+      <xs:complexType name="JTXCaller">
+        <xs:sequence>
+          <xs:element name="Username" nillable="true" type="xs:string" />
+          <xs:element name="Password" nillable="true" type="xs:string" />
+          <xs:element name="Domain" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXUser">
+        <xs:sequence>
+          <xs:element name="Address" nillable="true" type="xs:string" />
+          <xs:element name="Email" nillable="true" type="xs:string" />
+          <xs:element name="FaxNumber" nillable="true" type="xs:string" />
+          <xs:element name="FirstName" nillable="true" type="xs:string" />
+          <xs:element name="FullName" nillable="true" type="xs:string" />
+          <xs:element name="LastName" nillable="true" type="xs:string" />
+          <xs:element name="PhoneNumber" nillable="true" type="xs:string" />
+          <xs:element name="RoomNumber" nillable="true" type="xs:string" />
+          <xs:element name="UserName" nillable="true" type="xs:string" />
+          <xs:element name="ZipCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXJobDescription">
+        <xs:sequence>
+          <xs:element name="AOI" nillable="true" type="e:SoapPolygon" />
+          <xs:element name="AssignedTo" nillable="true" type="xs:string" />
+          <xs:element name="AssignedType" type="xs:int" />
+          <xs:element name="CreatedBy" nillable="true" type="xs:string" />
+          <xs:element name="Description" nillable="true" type="xs:string" />
+          <xs:element name="DueDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="EndDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="ID" type="xs:int" />
+          <xs:element name="JobTypeID" type="xs:int" />
+          <xs:element name="Name" nillable="true" type="xs:string" />
+          <xs:element name="OwnedBy" nillable="true" type="xs:string" />
+          <xs:element name="ParentJobID" type="xs:int" />
+          <xs:element name="ParentVersion" nillable="true" type="xs:string" />
+          <xs:element name="Priority" type="xs:int" />
+          <xs:element name="StartDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="StartedDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="VersionName" nillable="true" type="xs:string" />
+          <xs:element name="CanClose" type="xs:boolean" />
+          <xs:element name="Stage" type="xs:int" />
+          <xs:element name="Status" type="xs:int" />
+          <xs:element name="DataWorkspaceID" nillable="true" type="xs:anyType" />
+          <xs:element name="CreatedDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="PercentageComplete" type="xs:double" />
+          <xs:element name="WorkflowXML" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXJobDependency">
+        <xs:sequence>
+          <xs:element name="DepJobID" type="xs:int" />
+          <xs:element name="DepOnType" type="xs:int" />
+          <xs:element name="DepOnValue" type="xs:int" />
+          <xs:element name="HeldOnType" type="xs:int" />
+          <xs:element name="HeldOnValue" type="xs:int" />
+          <xs:element name="ID" type="xs:int" />
+          <xs:element name="JobID" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXQuery">
+        <xs:sequence>
+          <xs:element name="FieldDescriptions" nillable="true" type="xs:string" />
+          <xs:element name="FieldNames" nillable="true" type="xs:string" />
+          <xs:element name="OrderBy" nillable="true" type="xs:string" />
+          <xs:element name="Tables" nillable="true" type="xs:string" />
+          <xs:element name="WhereClause" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXAttachment">
+        <xs:sequence>
+          <xs:element name="Filename" nillable="true" type="xs:string" />
+          <xs:element name="Folder" nillable="true" type="xs:string" />
+          <xs:element name="ID" type="xs:int" />
+          <xs:element name="StorageType" type="xs:int" />
+          <xs:element name="Type" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXAuxRecordContainer">
+        <xs:sequence>
+          <xs:element name="DisplayProperty" nillable="true" type="xs:string" />
+          <xs:element name="JobID" type="xs:int" />
+          <xs:element name="RelationshipType" type="xs:int" />
+          <xs:element name="TableAlias" nillable="true" type="xs:string" />
+          <xs:element name="TableName" nillable="true" type="xs:string" />
+          <xs:element name="Records" type="e:ArrayOfJTXAuxRecord" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXAuxRecord">
+        <xs:sequence>
+          <xs:element name="ID" type="xs:int" />
+          <xs:element name="DisplayProperty" nillable="true" type="xs:anyType" />
+          <xs:element name="RecordValues" type="e:ArrayOfJTXAuxRecordValue" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXAuxRecordValue">
+        <xs:sequence>
+          <xs:element name="CanUpdate" type="xs:boolean" />
+          <xs:element name="Data" nillable="true" type="xs:anyType" />
+          <xs:element name="DataType" type="xs:int" />
+          <xs:element name="Domain" nillable="true" type="xs:string" />
+          <xs:element name="Length" type="xs:int" />
+          <xs:element name="PropAlias" nillable="true" type="xs:string" />
+          <xs:element name="PropName" nillable="true" type="xs:string" />
+          <xs:element name="Required" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXActivityRecord">
+        <xs:sequence>
+          <xs:element name="ActivityTypeID" type="xs:int" />
+          <xs:element name="ActivityDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="Message" nillable="true" type="xs:string" />
+          <xs:element name="User" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXJobHold">
+        <xs:sequence>
+          <xs:element name="HeldBy" nillable="true" type="xs:string" />
+          <xs:element name="HoldComments" nillable="true" type="xs:string" />
+          <xs:element name="HoldDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="ID" type="xs:int" />
+          <xs:element name="JobID" type="xs:int" />
+          <xs:element name="ReleaseComments" nillable="true" type="xs:string" />
+          <xs:element name="ReleaseDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="ReleasedBy" nillable="true" type="xs:string" />
+          <xs:element name="HoldTypeID" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXAuxRecordDescription">
+        <xs:sequence>
+          <xs:element name="RecordID" type="xs:int" />
+          <xs:element name="ContainerName" nillable="true" type="xs:string" />
+          <xs:element name="PropertyCount" type="xs:int" />
+          <xs:element name="PropertyNames" type="e:ArrayOfString" />
+          <xs:element name="PropertyValues" type="e:ArrayOfAnyType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXDatabaseVersion">
+        <xs:sequence>
+          <xs:element name="AccessLevel" nillable="true" type="xs:string" />
+          <xs:element name="VersionName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SoapPolygon">
+        <xs:sequence>
+          <xs:element name="PolygonXML" nillable="true" type="xs:string" />
+          <xs:element name="XMLType" type="xs:int" />
+          <xs:element name="HasZ" type="xs:boolean" />
+          <xs:element name="SpatialRefCode" type="xs:int" />
+          <xs:element name="KnownCoord" type="xs:boolean" />
+          <xs:element name="GeographicSpatialRef" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXActivityType">
+        <xs:sequence>
+          <xs:element name="Active" type="xs:boolean" />
+          <xs:element name="Description" nillable="true" type="xs:string" />
+          <xs:element name="Message" nillable="true" type="xs:string" />
+          <xs:element name="Name" nillable="true" type="xs:string" />
+          <xs:element name="ID" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXPrivilege">
+        <xs:sequence>
+          <xs:element name="Name" nillable="true" type="xs:string" />
+          <xs:element name="Description" nillable="true" type="xs:string" />
+          <xs:element name="ID" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXUserGroup">
+        <xs:sequence>
+          <xs:element name="Description" nillable="true" type="xs:string" />
+          <xs:element name="ID" type="xs:int" />
+          <xs:element name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXPriority">
+        <xs:sequence>
+          <xs:element name="Description" nillable="true" type="xs:string" />
+          <xs:element name="Name" nillable="true" type="xs:string" />
+          <xs:element name="Value" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXStatus">
+        <xs:sequence>
+          <xs:element name="Description" nillable="true" type="xs:string" />
+          <xs:element name="ID" type="xs:int" />
+          <xs:element name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXJobTypeName">
+        <xs:sequence>
+          <xs:element name="Name" nillable="true" type="xs:string" />
+          <xs:element name="Description" nillable="true" type="xs:string" />
+          <xs:element name="ID" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXHoldType">
+        <xs:sequence>
+          <xs:element name="Description" nillable="true" type="xs:string" />
+          <xs:element name="ID" type="xs:int" />
+          <xs:element name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXJobQueryContainer">
+        <xs:sequence>
+          <xs:element name="ID" type="xs:int" />
+          <xs:element name="Name" nillable="true" type="xs:string" />
+          <xs:element name="SubContainers" type="e:ArrayOfJTXJobQueryContainer" />
+          <xs:element name="Queries" type="e:ArrayOfJTXJobQuery" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXJobQuery">
+        <xs:sequence>
+          <xs:element name="ID" type="xs:int" />
+          <xs:element name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXServerExecuteInfo">
+        <xs:sequence>
+          <xs:element name="WorkflowConflicts" type="e:JTXWorkflowConflicts" />
+          <xs:element name="ErrorCode" type="xs:int" />
+          <xs:element name="ErrorDescription" nillable="true" type="xs:string" />
+          <xs:element name="ExecutionResult" type="xs:int" />
+          <xs:element name="HasConflicts" type="xs:boolean" />
+          <xs:element name="HasReturnCode" type="xs:boolean" />
+          <xs:element name="JobID" type="xs:int" />
+          <xs:element name="ReturnCode" type="xs:int" />
+          <xs:element name="StepID" type="xs:int" />
+          <xs:element name="ThrewError" type="xs:boolean" />
+          <xs:element name="FileName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXWorkflowConflicts">
+        <xs:sequence>
+          <xs:element name="JobID" type="xs:int" />
+          <xs:element name="OptionCount" type="xs:int" />
+          <xs:element name="SpawnsConcurrency" type="xs:boolean" />
+          <xs:element name="StepID" type="xs:int" />
+          <xs:element name="WorkflowOptions" type="e:ArrayOfJTXWorkflowOption" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXWorkflowOption">
+        <xs:sequence>
+          <xs:element name="ReturnCode" type="xs:int" />
+          <xs:element name="Steps" type="e:ArrayOfJTXStepInfo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXStepInfo">
+        <xs:sequence>
+          <xs:element name="ID" type="xs:int" />
+          <xs:element name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXStep">
+        <xs:sequence>
+          <xs:element name="AssignedTo" nillable="true" type="xs:string" />
+          <xs:element name="AssignedType" type="xs:int" />
+          <xs:element name="Async" type="xs:boolean" />
+          <xs:element name="AutoRun" type="xs:boolean" />
+          <xs:element name="CanSkip" type="xs:boolean" />
+          <xs:element name="CanSpawnConcurrency" type="xs:boolean" />
+          <xs:element name="CommonID" type="xs:int" />
+          <xs:element name="HasBeenExecuted" type="xs:boolean" />
+          <xs:element name="SelfCheck" type="xs:boolean" />
+          <xs:element name="StepID" type="xs:int" />
+          <xs:element name="StepType" type="e:JTXStepType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXStepType">
+        <xs:sequence>
+          <xs:element name="Description" nillable="true" type="xs:string" />
+          <xs:element name="ExecutionType" type="xs:int" />
+          <xs:element name="ID" type="xs:int" />
+          <xs:element name="Name" nillable="true" type="xs:string" />
+          <xs:element name="Visible" type="xs:boolean" />
+          <xs:element name="Program" nillable="true" type="xs:string" />
+          <xs:element name="Arguments" nillable="true" type="xs:string" />
+          <xs:element name="StepTypeIndicator" type="xs:int" />
+          <xs:element name="StepDescriptionType" type="xs:int" />
+          <xs:element name="StepDescriptionLink" nillable="true" type="xs:string" />
+          <xs:element name="SupportedPlatform" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXReportDescription">
+        <xs:sequence>
+          <xs:element name="ID" type="xs:int" />
+          <xs:element name="Name" nillable="true" type="xs:string" />
+          <xs:element name="Title" nillable="true" type="xs:string" />
+          <xs:element name="Description" nillable="true" type="xs:string" />
+          <xs:element name="Hierarchy" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXDataWorkspaceName">
+        <xs:sequence>
+          <xs:element name="DatabaseID" nillable="true" type="xs:string" />
+          <xs:element name="Name" nillable="true" type="xs:string" />
+          <xs:element name="Version" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXFeature">
+        <xs:sequence>
+          <xs:element name="DatasetName" nillable="true" type="xs:string" />
+          <xs:element name="GFID" nillable="true" type="xs:string" />
+          <xs:element name="GeometryXML" nillable="true" type="xs:string" />
+          <xs:element name="FieldCount" type="xs:int" />
+          <xs:element name="Names" type="e:ArrayOfInt" />
+          <xs:element name="Types" type="e:ArrayOfInt" />
+          <xs:element name="Values" type="e:ArrayOfInt" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXChange">
+        <xs:sequence>
+          <xs:element name="JobID" type="xs:int" />
+          <xs:element name="ChangeType" type="xs:int" />
+          <xs:element name="ChangeTime" nillable="true" type="xs:dateTime" />
+          <xs:element name="DatasetName" nillable="true" type="xs:string" />
+          <xs:element name="DatabaseID" nillable="true" type="xs:string" />
+          <xs:element name="BeforeFeature" type="e:JTXFeature" />
+          <xs:element name="AfterFeature" type="e:JTXFeature" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXChangeRuleName">
+        <xs:sequence>
+          <xs:element name="ID" nillable="true" type="xs:string" />
+          <xs:element name="Name" nillable="true" type="xs:string" />
+          <xs:element name="Description" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JTXChangeRuleMatch">
+        <xs:sequence>
+          <xs:element name="ID" nillable="true" type="xs:string" />
+          <xs:element name="Rule" type="e:JTXChangeRuleName" />
+          <xs:element name="Change" type="e:JTXChange" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfInt">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="Int" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfString">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="String" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfAnyType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="AnyType" type="xs:anyType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXJobDescription">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXJobDescription" type="e:JTXJobDescription" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXJobDependency">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXJobDependency" type="e:JTXJobDependency" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXAttachment">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXAttachment" type="e:JTXAttachment" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXAuxRecordContainer">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXAuxRecordContainer" type="e:JTXAuxRecordContainer" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXAuxRecord">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXAuxRecord" type="e:JTXAuxRecord" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXAuxRecordValue">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXAuxRecordValue" type="e:JTXAuxRecordValue" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXActivityRecord">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXActivityRecord" type="e:JTXActivityRecord" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXAuxRecordDescription">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXAuxRecordDescription" type="e:JTXAuxRecordDescription" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXJobHold">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXJobHold" type="e:JTXJobHold" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXDatabaseVersion">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXDatabaseVersion" type="e:JTXDatabaseVersion" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXActivityType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXActivityType" type="e:JTXActivityType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXPrivilege">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXPrivilege" type="e:JTXPrivilege" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXUserGroup">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXUserGroup" type="e:JTXUserGroup" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXPriority">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXPriority" type="e:JTXPriority" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXStatus">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXStatus" type="e:JTXStatus" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXUser">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXUser" type="e:JTXUser" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXJobTypeName">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXJobTypeName" type="e:JTXJobTypeName" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXHoldType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXHoldType" type="e:JTXHoldType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXJobQueryContainer">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXJobQueryContainer" type="e:JTXJobQueryContainer" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXJobQuery">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXJobQuery" type="e:JTXJobQuery" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXServerExecuteInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXServerExecuteInfo" type="e:JTXServerExecuteInfo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXWorkflowOption">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXWorkflowOption" type="e:JTXWorkflowOption" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXStepInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXStepInfo" type="e:JTXStepInfo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXStep">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXStep" type="e:JTXStep" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXReportDescription">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXReportDescription" type="e:JTXReportDescription" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXDataWorkspaceName">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXDataWorkspaceName" type="e:JTXDataWorkspaceName" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfJTXChangeRuleMatch">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JTXChangeRuleMatch" type="e:JTXChangeRuleMatch" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </types>
+  <message name="CreateDatabaseVersionIn">
+    <part name="parameters" element="e:CreateDatabaseVersion" />
+  </message>
+  <message name="CreateDatabaseVersionOut">
+    <part name="parameters" element="e:CreateDatabaseVersionResponse" />
+  </message>
+  <message name="GetAllDatabaseVersionsIn">
+    <part name="parameters" element="e:GetAllDatabaseVersions" />
+  </message>
+  <message name="GetAllDatabaseVersionsOut">
+    <part name="parameters" element="e:GetAllDatabaseVersionsResponse" />
+  </message>
+  <message name="GetAllActivityTypesIn">
+    <part name="parameters" element="e:GetAllActivityTypes" />
+  </message>
+  <message name="GetAllActivityTypesOut">
+    <part name="parameters" element="e:GetAllActivityTypesResponse" />
+  </message>
+  <message name="GetConfigPropertyIn">
+    <part name="parameters" element="e:GetConfigProperty" />
+  </message>
+  <message name="GetConfigPropertyOut">
+    <part name="parameters" element="e:GetConfigPropertyResponse" />
+  </message>
+  <message name="GetAllUsersIn">
+    <part name="parameters" element="e:GetAllUsers" />
+  </message>
+  <message name="GetAllUsersOut">
+    <part name="parameters" element="e:GetAllUsersResponse" />
+  </message>
+  <message name="GetUserIn">
+    <part name="parameters" element="e:GetUser" />
+  </message>
+  <message name="GetUserOut">
+    <part name="parameters" element="e:GetUserResponse" />
+  </message>
+  <message name="GetUserPrivilegesIn">
+    <part name="parameters" element="e:GetUserPrivileges" />
+  </message>
+  <message name="GetUserPrivilegesOut">
+    <part name="parameters" element="e:GetUserPrivilegesResponse" />
+  </message>
+  <message name="GetAllGroupsIn">
+    <part name="parameters" element="e:GetAllGroups" />
+  </message>
+  <message name="GetAllGroupsOut">
+    <part name="parameters" element="e:GetAllGroupsResponse" />
+  </message>
+  <message name="GetUserGroupsIn">
+    <part name="parameters" element="e:GetUserGroups" />
+  </message>
+  <message name="GetUserGroupsOut">
+    <part name="parameters" element="e:GetUserGroupsResponse" />
+  </message>
+  <message name="GetGroupUsersIn">
+    <part name="parameters" element="e:GetGroupUsers" />
+  </message>
+  <message name="GetGroupUsersOut">
+    <part name="parameters" element="e:GetGroupUsersResponse" />
+  </message>
+  <message name="GetAllPrioritiesIn">
+    <part name="parameters" element="e:GetAllPriorities" />
+  </message>
+  <message name="GetAllPrioritiesOut">
+    <part name="parameters" element="e:GetAllPrioritiesResponse" />
+  </message>
+  <message name="GetAllStatusesIn">
+    <part name="parameters" element="e:GetAllStatuses" />
+  </message>
+  <message name="GetAllStatusesOut">
+    <part name="parameters" element="e:GetAllStatusesResponse" />
+  </message>
+  <message name="GetAllJobTypesIn">
+    <part name="parameters" element="e:GetAllJobTypes" />
+  </message>
+  <message name="GetAllJobTypesOut">
+    <part name="parameters" element="e:GetAllJobTypesResponse" />
+  </message>
+  <message name="GetPublicQueryContainerIn">
+    <part name="parameters" element="e:GetPublicQueryContainer" />
+  </message>
+  <message name="GetPublicQueryContainerOut">
+    <part name="parameters" element="e:GetPublicQueryContainerResponse" />
+  </message>
+  <message name="GetUserQueryContainerIn">
+    <part name="parameters" element="e:GetUserQueryContainer" />
+  </message>
+  <message name="GetUserQueryContainerOut">
+    <part name="parameters" element="e:GetUserQueryContainerResponse" />
+  </message>
+  <message name="GetAllHoldTypesIn">
+    <part name="parameters" element="e:GetAllHoldTypes" />
+  </message>
+  <message name="GetAllHoldTypesOut">
+    <part name="parameters" element="e:GetAllHoldTypesResponse" />
+  </message>
+  <message name="GetAllDataWorkspacesIn">
+    <part name="parameters" element="e:GetAllDataWorkspaces" />
+  </message>
+  <message name="GetAllDataWorkspacesOut">
+    <part name="parameters" element="e:GetAllDataWorkspacesResponse" />
+  </message>
+  <message name="GetAllDataWorkspaceVersionsIn">
+    <part name="parameters" element="e:GetAllDataWorkspaceVersions" />
+  </message>
+  <message name="GetAllDataWorkspaceVersionsOut">
+    <part name="parameters" element="e:GetAllDataWorkspaceVersionsResponse" />
+  </message>
+  <message name="AddAttachmentIn">
+    <part name="parameters" element="e:AddAttachment" />
+  </message>
+  <message name="AddAttachmentOut">
+    <part name="parameters" element="e:AddAttachmentResponse" />
+  </message>
+  <message name="AddAuxRecordIn">
+    <part name="parameters" element="e:AddAuxRecord" />
+  </message>
+  <message name="AddAuxRecordOut">
+    <part name="parameters" element="e:AddAuxRecordResponse" />
+  </message>
+  <message name="AssignJobsToGroupIn">
+    <part name="parameters" element="e:AssignJobsToGroup" />
+  </message>
+  <message name="AssignJobsToGroupOut">
+    <part name="parameters" element="e:AssignJobsToGroupResponse" />
+  </message>
+  <message name="AssignJobsToUserIn">
+    <part name="parameters" element="e:AssignJobsToUser" />
+  </message>
+  <message name="AssignJobsToUserOut">
+    <part name="parameters" element="e:AssignJobsToUserResponse" />
+  </message>
+  <message name="CloseJobIn">
+    <part name="parameters" element="e:CloseJob" />
+  </message>
+  <message name="CloseJobOut">
+    <part name="parameters" element="e:CloseJobResponse" />
+  </message>
+  <message name="CreateDependencyIn">
+    <part name="parameters" element="e:CreateDependency" />
+  </message>
+  <message name="CreateDependencyOut">
+    <part name="parameters" element="e:CreateDependencyResponse" />
+  </message>
+  <message name="CreateJobHoldIn">
+    <part name="parameters" element="e:CreateJobHold" />
+  </message>
+  <message name="CreateJobHoldOut">
+    <part name="parameters" element="e:CreateJobHoldResponse" />
+  </message>
+  <message name="CreateJobsIn">
+    <part name="parameters" element="e:CreateJobs" />
+  </message>
+  <message name="CreateJobsOut">
+    <part name="parameters" element="e:CreateJobsResponse" />
+  </message>
+  <message name="DeleteAttachmentIn">
+    <part name="parameters" element="e:DeleteAttachment" />
+  </message>
+  <message name="DeleteAttachmentOut">
+    <part name="parameters" element="e:DeleteAttachmentResponse" />
+  </message>
+  <message name="DeleteDependencyIn">
+    <part name="parameters" element="e:DeleteDependency" />
+  </message>
+  <message name="DeleteDependencyOut">
+    <part name="parameters" element="e:DeleteDependencyResponse" />
+  </message>
+  <message name="DeleteJobsIn">
+    <part name="parameters" element="e:DeleteJobs" />
+  </message>
+  <message name="DeleteJobsOut">
+    <part name="parameters" element="e:DeleteJobsResponse" />
+  </message>
+  <message name="ExecuteQueryIn">
+    <part name="parameters" element="e:ExecuteQuery" />
+  </message>
+  <message name="ExecuteQueryOut">
+    <part name="parameters" element="e:ExecuteQueryResponse" />
+  </message>
+  <message name="ExecuteQueryByIDIn">
+    <part name="parameters" element="e:ExecuteQueryByID" />
+  </message>
+  <message name="ExecuteQueryByIDOut">
+    <part name="parameters" element="e:ExecuteQueryByIDResponse" />
+  </message>
+  <message name="GetAllJobsIn">
+    <part name="parameters" element="e:GetAllJobs" />
+  </message>
+  <message name="GetAllJobsOut">
+    <part name="parameters" element="e:GetAllJobsResponse" />
+  </message>
+  <message name="GetAttachmentFileIn">
+    <part name="parameters" element="e:GetAttachmentFile" />
+  </message>
+  <message name="GetAttachmentFileOut">
+    <part name="parameters" element="e:GetAttachmentFileResponse" />
+  </message>
+  <message name="GetAttachmentsIn">
+    <part name="parameters" element="e:GetAttachments" />
+  </message>
+  <message name="GetAttachmentsOut">
+    <part name="parameters" element="e:GetAttachmentsResponse" />
+  </message>
+  <message name="GetAuxRecordsIn">
+    <part name="parameters" element="e:GetAuxRecords" />
+  </message>
+  <message name="GetAuxRecordsOut">
+    <part name="parameters" element="e:GetAuxRecordsResponse" />
+  </message>
+  <message name="GetJobDependenciesIn">
+    <part name="parameters" element="e:GetJobDependencies" />
+  </message>
+  <message name="GetJobDependenciesOut">
+    <part name="parameters" element="e:GetJobDependenciesResponse" />
+  </message>
+  <message name="GetJobHoldsIn">
+    <part name="parameters" element="e:GetJobHolds" />
+  </message>
+  <message name="GetJobHoldsOut">
+    <part name="parameters" element="e:GetJobHoldsResponse" />
+  </message>
+  <message name="GetJobHistoryIn">
+    <part name="parameters" element="e:GetJobHistory" />
+  </message>
+  <message name="GetJobHistoryOut">
+    <part name="parameters" element="e:GetJobHistoryResponse" />
+  </message>
+  <message name="GetJobIDsIn">
+    <part name="parameters" element="e:GetJobIDs" />
+  </message>
+  <message name="GetJobIDsOut">
+    <part name="parameters" element="e:GetJobIDsResponse" />
+  </message>
+  <message name="GetJobNotesIn">
+    <part name="parameters" element="e:GetJobNotes" />
+  </message>
+  <message name="GetJobNotesOut">
+    <part name="parameters" element="e:GetJobNotesResponse" />
+  </message>
+  <message name="GetJobsIn">
+    <part name="parameters" element="e:GetJobs" />
+  </message>
+  <message name="GetJobsOut">
+    <part name="parameters" element="e:GetJobsResponse" />
+  </message>
+  <message name="LogJobActionIn">
+    <part name="parameters" element="e:LogJobAction" />
+  </message>
+  <message name="LogJobActionOut">
+    <part name="parameters" element="e:LogJobActionResponse" />
+  </message>
+  <message name="ReleaseJobHoldIn">
+    <part name="parameters" element="e:ReleaseJobHold" />
+  </message>
+  <message name="ReleaseJobHoldOut">
+    <part name="parameters" element="e:ReleaseJobHoldResponse" />
+  </message>
+  <message name="UnassignJobsIn">
+    <part name="parameters" element="e:UnassignJobs" />
+  </message>
+  <message name="UnassignJobsOut">
+    <part name="parameters" element="e:UnassignJobsResponse" />
+  </message>
+  <message name="UpdateAuxRecordIn">
+    <part name="parameters" element="e:UpdateAuxRecord" />
+  </message>
+  <message name="UpdateAuxRecordOut">
+    <part name="parameters" element="e:UpdateAuxRecordResponse" />
+  </message>
+  <message name="UpdateJobNotesIn">
+    <part name="parameters" element="e:UpdateJobNotes" />
+  </message>
+  <message name="UpdateJobNotesOut">
+    <part name="parameters" element="e:UpdateJobNotesResponse" />
+  </message>
+  <message name="UpdateJobPropertiesIn">
+    <part name="parameters" element="e:UpdateJobProperties" />
+  </message>
+  <message name="UpdateJobPropertiesOut">
+    <part name="parameters" element="e:UpdateJobPropertiesResponse" />
+  </message>
+  <message name="CreateJobVersionIn">
+    <part name="parameters" element="e:CreateJobVersion" />
+  </message>
+  <message name="CreateJobVersionOut">
+    <part name="parameters" element="e:CreateJobVersionResponse" />
+  </message>
+  <message name="GetDefaultJobDescriptionIn">
+    <part name="parameters" element="e:GetDefaultJobDescription" />
+  </message>
+  <message name="GetDefaultJobDescriptionOut">
+    <part name="parameters" element="e:GetDefaultJobDescriptionResponse" />
+  </message>
+  <message name="GetChildJobIDsIn">
+    <part name="parameters" element="e:GetChildJobIDs" />
+  </message>
+  <message name="GetChildJobIDsOut">
+    <part name="parameters" element="e:GetChildJobIDsResponse" />
+  </message>
+  <message name="ExecuteAutoWorkflowIn">
+    <part name="parameters" element="e:ExecuteAutoWorkflow" />
+  </message>
+  <message name="ExecuteAutoWorkflowOut">
+    <part name="parameters" element="e:ExecuteAutoWorkflowResponse" />
+  </message>
+  <message name="ExecuteStepsIn">
+    <part name="parameters" element="e:ExecuteSteps" />
+  </message>
+  <message name="ExecuteStepsOut">
+    <part name="parameters" element="e:ExecuteStepsResponse" />
+  </message>
+  <message name="GetAllCurrentStepsIn">
+    <part name="parameters" element="e:GetAllCurrentSteps" />
+  </message>
+  <message name="GetAllCurrentStepsOut">
+    <part name="parameters" element="e:GetAllCurrentStepsResponse" />
+  </message>
+  <message name="GetAllJobStepsIn">
+    <part name="parameters" element="e:GetAllJobSteps" />
+  </message>
+  <message name="GetAllJobStepsOut">
+    <part name="parameters" element="e:GetAllJobStepsResponse" />
+  </message>
+  <message name="GetJobStepIn">
+    <part name="parameters" element="e:GetJobStep" />
+  </message>
+  <message name="GetJobStepOut">
+    <part name="parameters" element="e:GetJobStepResponse" />
+  </message>
+  <message name="GetJobWorkflowImageIn">
+    <part name="parameters" element="e:GetJobWorkflowImage" />
+  </message>
+  <message name="GetJobWorkflowImageOut">
+    <part name="parameters" element="e:GetJobWorkflowImageResponse" />
+  </message>
+  <message name="MarkStepsAsDoneIn">
+    <part name="parameters" element="e:MarkStepsAsDone" />
+  </message>
+  <message name="MarkStepsAsDoneOut">
+    <part name="parameters" element="e:MarkStepsAsDoneResponse" />
+  </message>
+  <message name="ResolveConflictIn">
+    <part name="parameters" element="e:ResolveConflict" />
+  </message>
+  <message name="ResolveConflictOut">
+    <part name="parameters" element="e:ResolveConflictResponse" />
+  </message>
+  <message name="GetStepDescriptionIn">
+    <part name="parameters" element="e:GetStepDescription" />
+  </message>
+  <message name="GetStepDescriptionOut">
+    <part name="parameters" element="e:GetStepDescriptionResponse" />
+  </message>
+  <message name="GetStepFileIn">
+    <part name="parameters" element="e:GetStepFile" />
+  </message>
+  <message name="GetStepFileOut">
+    <part name="parameters" element="e:GetStepFileResponse" />
+  </message>
+  <message name="MoveNextStepIn">
+    <part name="parameters" element="e:MoveNextStep" />
+  </message>
+  <message name="MoveNextStepOut">
+    <part name="parameters" element="e:MoveNextStepResponse" />
+  </message>
+  <message name="CanRunStepIn">
+    <part name="parameters" element="e:CanRunStep" />
+  </message>
+  <message name="CanRunStepOut">
+    <part name="parameters" element="e:CanRunStepResponse" />
+  </message>
+  <message name="GetAllReportsIn">
+    <part name="parameters" element="e:GetAllReports" />
+  </message>
+  <message name="GetAllReportsOut">
+    <part name="parameters" element="e:GetAllReportsResponse" />
+  </message>
+  <message name="GetReportIn">
+    <part name="parameters" element="e:GetReport" />
+  </message>
+  <message name="GetReportOut">
+    <part name="parameters" element="e:GetReportResponse" />
+  </message>
+  <message name="GenerateFormattedReportIn">
+    <part name="parameters" element="e:GenerateFormattedReport" />
+  </message>
+  <message name="GenerateFormattedReportOut">
+    <part name="parameters" element="e:GenerateFormattedReportResponse" />
+  </message>
+  <message name="GenerateUnformattedReportIn">
+    <part name="parameters" element="e:GenerateUnformattedReport" />
+  </message>
+  <message name="GenerateUnformattedReportOut">
+    <part name="parameters" element="e:GenerateUnformattedReportResponse" />
+  </message>
+  <message name="GetReportStylesheetIn">
+    <part name="parameters" element="e:GetReportStylesheet" />
+  </message>
+  <message name="GetReportStylesheetOut">
+    <part name="parameters" element="e:GetReportStylesheetResponse" />
+  </message>
+  <message name="GetDatabaseTimeIn">
+    <part name="parameters" element="e:GetDatabaseTime" />
+  </message>
+  <message name="GetDatabaseTimeOut">
+    <part name="parameters" element="e:GetDatabaseTimeResponse" />
+  </message>
+  <message name="RunSpatialNotificationsOnHistoryIn">
+    <part name="parameters" element="e:RunSpatialNotificationsOnHistory" />
+  </message>
+  <message name="RunSpatialNotificationsOnHistoryOut">
+    <part name="parameters" element="e:RunSpatialNotificationsOnHistoryResponse" />
+  </message>
+  <message name="LogMatchesIn">
+    <part name="parameters" element="e:LogMatches" />
+  </message>
+  <message name="LogMatchesOut">
+    <part name="parameters" element="e:LogMatchesResponse" />
+  </message>
+  <message name="GetLoggedMatchIn">
+    <part name="parameters" element="e:GetLoggedMatch" />
+  </message>
+  <message name="GetLoggedMatchOut">
+    <part name="parameters" element="e:GetLoggedMatchResponse" />
+  </message>
+  <message name="GetSessionMatchesIn">
+    <part name="parameters" element="e:GetSessionMatches" />
+  </message>
+  <message name="GetSessionMatchesOut">
+    <part name="parameters" element="e:GetSessionMatchesResponse" />
+  </message>
+  <message name="NotifyLoggedMatchesIn">
+    <part name="parameters" element="e:NotifyLoggedMatches" />
+  </message>
+  <message name="NotifyLoggedMatchesOut">
+    <part name="parameters" element="e:NotifyLoggedMatchesResponse" />
+  </message>
+  <portType name="JTXServerPort">
+    <operation name="CreateDatabaseVersion">
+      <input message="e:CreateDatabaseVersionIn" />
+      <output message="e:CreateDatabaseVersionOut" />
+    </operation>
+    <operation name="GetAllDatabaseVersions">
+      <input message="e:GetAllDatabaseVersionsIn" />
+      <output message="e:GetAllDatabaseVersionsOut" />
+    </operation>
+    <operation name="GetAllActivityTypes">
+      <input message="e:GetAllActivityTypesIn" />
+      <output message="e:GetAllActivityTypesOut" />
+    </operation>
+    <operation name="GetConfigProperty">
+      <input message="e:GetConfigPropertyIn" />
+      <output message="e:GetConfigPropertyOut" />
+    </operation>
+    <operation name="GetAllUsers">
+      <input message="e:GetAllUsersIn" />
+      <output message="e:GetAllUsersOut" />
+    </operation>
+    <operation name="GetUser">
+      <input message="e:GetUserIn" />
+      <output message="e:GetUserOut" />
+    </operation>
+    <operation name="GetUserPrivileges">
+      <input message="e:GetUserPrivilegesIn" />
+      <output message="e:GetUserPrivilegesOut" />
+    </operation>
+    <operation name="GetAllGroups">
+      <input message="e:GetAllGroupsIn" />
+      <output message="e:GetAllGroupsOut" />
+    </operation>
+    <operation name="GetUserGroups">
+      <input message="e:GetUserGroupsIn" />
+      <output message="e:GetUserGroupsOut" />
+    </operation>
+    <operation name="GetGroupUsers">
+      <input message="e:GetGroupUsersIn" />
+      <output message="e:GetGroupUsersOut" />
+    </operation>
+    <operation name="GetAllPriorities">
+      <input message="e:GetAllPrioritiesIn" />
+      <output message="e:GetAllPrioritiesOut" />
+    </operation>
+    <operation name="GetAllStatuses">
+      <input message="e:GetAllStatusesIn" />
+      <output message="e:GetAllStatusesOut" />
+    </operation>
+    <operation name="GetAllJobTypes">
+      <input message="e:GetAllJobTypesIn" />
+      <output message="e:GetAllJobTypesOut" />
+    </operation>
+    <operation name="GetPublicQueryContainer">
+      <input message="e:GetPublicQueryContainerIn" />
+      <output message="e:GetPublicQueryContainerOut" />
+    </operation>
+    <operation name="GetUserQueryContainer">
+      <input message="e:GetUserQueryContainerIn" />
+      <output message="e:GetUserQueryContainerOut" />
+    </operation>
+    <operation name="GetAllHoldTypes">
+      <input message="e:GetAllHoldTypesIn" />
+      <output message="e:GetAllHoldTypesOut" />
+    </operation>
+    <operation name="GetAllDataWorkspaces">
+      <input message="e:GetAllDataWorkspacesIn" />
+      <output message="e:GetAllDataWorkspacesOut" />
+    </operation>
+    <operation name="GetAllDataWorkspaceVersions">
+      <input message="e:GetAllDataWorkspaceVersionsIn" />
+      <output message="e:GetAllDataWorkspaceVersionsOut" />
+    </operation>
+    <operation name="AddAttachment">
+      <input message="e:AddAttachmentIn" />
+      <output message="e:AddAttachmentOut" />
+    </operation>
+    <operation name="AddAuxRecord">
+      <input message="e:AddAuxRecordIn" />
+      <output message="e:AddAuxRecordOut" />
+    </operation>
+    <operation name="AssignJobsToGroup">
+      <input message="e:AssignJobsToGroupIn" />
+      <output message="e:AssignJobsToGroupOut" />
+    </operation>
+    <operation name="AssignJobsToUser">
+      <input message="e:AssignJobsToUserIn" />
+      <output message="e:AssignJobsToUserOut" />
+    </operation>
+    <operation name="CloseJob">
+      <input message="e:CloseJobIn" />
+      <output message="e:CloseJobOut" />
+    </operation>
+    <operation name="CreateDependency">
+      <input message="e:CreateDependencyIn" />
+      <output message="e:CreateDependencyOut" />
+    </operation>
+    <operation name="CreateJobHold">
+      <input message="e:CreateJobHoldIn" />
+      <output message="e:CreateJobHoldOut" />
+    </operation>
+    <operation name="CreateJobs">
+      <input message="e:CreateJobsIn" />
+      <output message="e:CreateJobsOut" />
+    </operation>
+    <operation name="DeleteAttachment">
+      <input message="e:DeleteAttachmentIn" />
+      <output message="e:DeleteAttachmentOut" />
+    </operation>
+    <operation name="DeleteDependency">
+      <input message="e:DeleteDependencyIn" />
+      <output message="e:DeleteDependencyOut" />
+    </operation>
+    <operation name="DeleteJobs">
+      <input message="e:DeleteJobsIn" />
+      <output message="e:DeleteJobsOut" />
+    </operation>
+    <operation name="ExecuteQuery">
+      <input message="e:ExecuteQueryIn" />
+      <output message="e:ExecuteQueryOut" />
+    </operation>
+    <operation name="ExecuteQueryByID">
+      <input message="e:ExecuteQueryByIDIn" />
+      <output message="e:ExecuteQueryByIDOut" />
+    </operation>
+    <operation name="GetAllJobs">
+      <input message="e:GetAllJobsIn" />
+      <output message="e:GetAllJobsOut" />
+    </operation>
+    <operation name="GetAttachmentFile">
+      <input message="e:GetAttachmentFileIn" />
+      <output message="e:GetAttachmentFileOut" />
+    </operation>
+    <operation name="GetAttachments">
+      <input message="e:GetAttachmentsIn" />
+      <output message="e:GetAttachmentsOut" />
+    </operation>
+    <operation name="GetAuxRecords">
+      <input message="e:GetAuxRecordsIn" />
+      <output message="e:GetAuxRecordsOut" />
+    </operation>
+    <operation name="GetJobDependencies">
+      <input message="e:GetJobDependenciesIn" />
+      <output message="e:GetJobDependenciesOut" />
+    </operation>
+    <operation name="GetJobHolds">
+      <input message="e:GetJobHoldsIn" />
+      <output message="e:GetJobHoldsOut" />
+    </operation>
+    <operation name="GetJobHistory">
+      <input message="e:GetJobHistoryIn" />
+      <output message="e:GetJobHistoryOut" />
+    </operation>
+    <operation name="GetJobIDs">
+      <input message="e:GetJobIDsIn" />
+      <output message="e:GetJobIDsOut" />
+    </operation>
+    <operation name="GetJobNotes">
+      <input message="e:GetJobNotesIn" />
+      <output message="e:GetJobNotesOut" />
+    </operation>
+    <operation name="GetJobs">
+      <input message="e:GetJobsIn" />
+      <output message="e:GetJobsOut" />
+    </operation>
+    <operation name="LogJobAction">
+      <input message="e:LogJobActionIn" />
+      <output message="e:LogJobActionOut" />
+    </operation>
+    <operation name="ReleaseJobHold">
+      <input message="e:ReleaseJobHoldIn" />
+      <output message="e:ReleaseJobHoldOut" />
+    </operation>
+    <operation name="UnassignJobs">
+      <input message="e:UnassignJobsIn" />
+      <output message="e:UnassignJobsOut" />
+    </operation>
+    <operation name="UpdateAuxRecord">
+      <input message="e:UpdateAuxRecordIn" />
+      <output message="e:UpdateAuxRecordOut" />
+    </operation>
+    <operation name="UpdateJobNotes">
+      <input message="e:UpdateJobNotesIn" />
+      <output message="e:UpdateJobNotesOut" />
+    </operation>
+    <operation name="UpdateJobProperties">
+      <input message="e:UpdateJobPropertiesIn" />
+      <output message="e:UpdateJobPropertiesOut" />
+    </operation>
+    <operation name="CreateJobVersion">
+      <input message="e:CreateJobVersionIn" />
+      <output message="e:CreateJobVersionOut" />
+    </operation>
+    <operation name="GetDefaultJobDescription">
+      <input message="e:GetDefaultJobDescriptionIn" />
+      <output message="e:GetDefaultJobDescriptionOut" />
+    </operation>
+    <operation name="GetChildJobIDs">
+      <input message="e:GetChildJobIDsIn" />
+      <output message="e:GetChildJobIDsOut" />
+    </operation>
+    <operation name="ExecuteAutoWorkflow">
+      <input message="e:ExecuteAutoWorkflowIn" />
+      <output message="e:ExecuteAutoWorkflowOut" />
+    </operation>
+    <operation name="ExecuteSteps">
+      <input message="e:ExecuteStepsIn" />
+      <output message="e:ExecuteStepsOut" />
+    </operation>
+    <operation name="GetAllCurrentSteps">
+      <input message="e:GetAllCurrentStepsIn" />
+      <output message="e:GetAllCurrentStepsOut" />
+    </operation>
+    <operation name="GetAllJobSteps">
+      <input message="e:GetAllJobStepsIn" />
+      <output message="e:GetAllJobStepsOut" />
+    </operation>
+    <operation name="GetJobStep">
+      <input message="e:GetJobStepIn" />
+      <output message="e:GetJobStepOut" />
+    </operation>
+    <operation name="GetJobWorkflowImage">
+      <input message="e:GetJobWorkflowImageIn" />
+      <output message="e:GetJobWorkflowImageOut" />
+    </operation>
+    <operation name="MarkStepsAsDone">
+      <input message="e:MarkStepsAsDoneIn" />
+      <output message="e:MarkStepsAsDoneOut" />
+    </operation>
+    <operation name="ResolveConflict">
+      <input message="e:ResolveConflictIn" />
+      <output message="e:ResolveConflictOut" />
+    </operation>
+    <operation name="GetStepDescription">
+      <input message="e:GetStepDescriptionIn" />
+      <output message="e:GetStepDescriptionOut" />
+    </operation>
+    <operation name="GetStepFile">
+      <input message="e:GetStepFileIn" />
+      <output message="e:GetStepFileOut" />
+    </operation>
+    <operation name="MoveNextStep">
+      <input message="e:MoveNextStepIn" />
+      <output message="e:MoveNextStepOut" />
+    </operation>
+    <operation name="CanRunStep">
+      <input message="e:CanRunStepIn" />
+      <output message="e:CanRunStepOut" />
+    </operation>
+    <operation name="GetAllReports">
+      <input message="e:GetAllReportsIn" />
+      <output message="e:GetAllReportsOut" />
+    </operation>
+    <operation name="GetReport">
+      <input message="e:GetReportIn" />
+      <output message="e:GetReportOut" />
+    </operation>
+    <operation name="GenerateFormattedReport">
+      <input message="e:GenerateFormattedReportIn" />
+      <output message="e:GenerateFormattedReportOut" />
+    </operation>
+    <operation name="GenerateUnformattedReport">
+      <input message="e:GenerateUnformattedReportIn" />
+      <output message="e:GenerateUnformattedReportOut" />
+    </operation>
+    <operation name="GetReportStylesheet">
+      <input message="e:GetReportStylesheetIn" />
+      <output message="e:GetReportStylesheetOut" />
+    </operation>
+    <operation name="GetDatabaseTime">
+      <input message="e:GetDatabaseTimeIn" />
+      <output message="e:GetDatabaseTimeOut" />
+    </operation>
+    <operation name="RunSpatialNotificationsOnHistory">
+      <input message="e:RunSpatialNotificationsOnHistoryIn" />
+      <output message="e:RunSpatialNotificationsOnHistoryOut" />
+    </operation>
+    <operation name="LogMatches">
+      <input message="e:LogMatchesIn" />
+      <output message="e:LogMatchesOut" />
+    </operation>
+    <operation name="GetLoggedMatch">
+      <input message="e:GetLoggedMatchIn" />
+      <output message="e:GetLoggedMatchOut" />
+    </operation>
+    <operation name="GetSessionMatches">
+      <input message="e:GetSessionMatchesIn" />
+      <output message="e:GetSessionMatchesOut" />
+    </operation>
+    <operation name="NotifyLoggedMatches">
+      <input message="e:NotifyLoggedMatchesIn" />
+      <output message="e:NotifyLoggedMatchesOut" />
+    </operation>
+  </portType>
+  <binding name="JTXServerBinding" type="e:JTXServerPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="CreateDatabaseVersion">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetAllDatabaseVersions">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetAllActivityTypes">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetConfigProperty">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetAllUsers">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetUser">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetUserPrivileges">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetAllGroups">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetUserGroups">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetGroupUsers">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetAllPriorities">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetAllStatuses">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetAllJobTypes">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetPublicQueryContainer">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetUserQueryContainer">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetAllHoldTypes">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetAllDataWorkspaces">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetAllDataWorkspaceVersions">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AddAttachment">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AddAuxRecord">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AssignJobsToGroup">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AssignJobsToUser">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CloseJob">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CreateDependency">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CreateJobHold">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CreateJobs">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DeleteAttachment">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DeleteDependency">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DeleteJobs">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ExecuteQuery">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ExecuteQueryByID">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetAllJobs">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetAttachmentFile">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetAttachments">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetAuxRecords">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetJobDependencies">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetJobHolds">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetJobHistory">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetJobIDs">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetJobNotes">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetJobs">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="LogJobAction">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ReleaseJobHold">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UnassignJobs">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UpdateAuxRecord">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UpdateJobNotes">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UpdateJobProperties">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CreateJobVersion">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetDefaultJobDescription">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetChildJobIDs">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ExecuteAutoWorkflow">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ExecuteSteps">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetAllCurrentSteps">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetAllJobSteps">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetJobStep">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetJobWorkflowImage">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="MarkStepsAsDone">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ResolveConflict">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetStepDescription">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetStepFile">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="MoveNextStep">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CanRunStep">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetAllReports">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetReport">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GenerateFormattedReport">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GenerateUnformattedReport">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetReportStylesheet">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetDatabaseTime">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RunSpatialNotificationsOnHistory">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="LogMatches">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetLoggedMatch">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetSessionMatches">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="NotifyLoggedMatches">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="JTXSO_JTXServer">
+    <port name="JTXServerPort" binding="e:JTXServerBinding">
+      <soap:address location="http://localhost/arcgis/services/JTXSO/JTXServer" />
+    </port>
+  </service>
+</definitions>

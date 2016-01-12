@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportADUsers", "ImportADUsers.csproj", "{894C66F3-DE44-400F-844F-A8AC7748D81E}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://pstfsarr:8080/tfs/implementationservices
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ImportADUsers.csproj
+		SccLocalPath1 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{894C66F3-DE44-400F-844F-A8AC7748D81E}.Debug|x86.ActiveCfg = Debug|x86
+		{894C66F3-DE44-400F-844F-A8AC7748D81E}.Debug|x86.Build.0 = Debug|x86
+		{894C66F3-DE44-400F-844F-A8AC7748D81E}.Release|x86.ActiveCfg = Release|x86
+		{894C66F3-DE44-400F-844F-A8AC7748D81E}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

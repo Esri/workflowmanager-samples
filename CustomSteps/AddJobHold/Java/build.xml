@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="build" name="AddJobHold">
+  <property name="target" value="1.8"/>
+  <property name="source" value="1.8"/>
+  <property name="jarOut" value="AddJobHold.jar"/>
+
+  <!-- TODO: Update the classpath to include the correct locations of your java libraries. -->
+  <property name="arcobjectsJar" value="/Program Files (x86)/ArcGIS/Desktop10.4/java/lib/arcobjects.jar" />
+  <property name="workflowManagerJar" value="/Program Files (x86)/ArcGIS/wmx/Desktop10.4/java/arcgis_jtx.jar" />
+  <!-- TODO: The manifest should contain the relative path from <ArcGIS Install>/java/lib/ext to the Workflow Manager JAR -->
+  <property name="workflowManagerJarManifest" value="../../../../wmx/Desktop10.4/java/arcgis_jtx.jar" />
+
+  <path id="AddJobHold.classpath">
+    <pathelement location="bin"/>
+    <pathelement location="${arcobjectsJar}"/>
+    <pathelement location="${workflowManagerJar}"/>
+  </path>
+  <target name="init">
+    <mkdir dir="bin"/>
+    <copy includeemptydirs="false" todir="bin">
+      <fileset dir="src">
+        <exclude name="**/*.java"/>
+      </fileset>
+    </copy>
+  </target>
+  <target name="clean">
+    <delete dir="bin"/>
+    <delete file="${jarOut}"/>
+  </target>
+  <target depends="clean" name="cleanall"/>
+  <target depends="init" name="compile">
+    <echo message="${ant.project.name}: ${ant.file}"/>
+    <javac debug="false" destdir="bin" source="${source}" target="${target}" includeantruntime="false">
+      <src path="src"/>
+      <classpath refid="AddJobHold.classpath"/>
+    </javac>
+  </target>
+  <target depends="jar" name="build" />
+  <target depends="compile" name="jar">
+    <jar destfile="${jarOut}" basedir="bin">
+      <manifest>
+        <attribute name="Class-Path" value="${workflowManagerJarManifest}" />
+      </manifest>
+    </jar>
+  </target>
+</project>

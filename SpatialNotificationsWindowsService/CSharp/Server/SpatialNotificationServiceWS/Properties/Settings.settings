@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SpatialNotificationServiceWS.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SpatialNotificationServiceWS_JTXServer_JTXSO_JTXServer" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/arcgis/services/JTXSO/JTXServer</Value>
+    </Setting>
+    <Setting Name="ConnectionUser" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">malc4273</Value>
+    </Setting>
+    <Setting Name="LogMatches" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Interval" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">15</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

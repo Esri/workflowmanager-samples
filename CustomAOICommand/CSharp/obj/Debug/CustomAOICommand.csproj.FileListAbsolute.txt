@@ -1,0 +1,4 @@
+C:\Workspaces\10.4\Trunk\Developer Kit\Samples\CustomAOICommand\CSharp\obj\Debug\CustomAOICommand.csprojResolveAssemblyReference.cache
+C:\Workspaces\10.4\Trunk\Developer Kit\Samples\CustomAOICommand\CSharp\obj\Debug\JTXSamples.AddressDialog.resources
+C:\Workspaces\10.4\Trunk\Developer Kit\Samples\CustomAOICommand\CSharp\obj\Debug\JTXSamples.Properties.Resources.resources
+C:\Workspaces\10.4\Trunk\Developer Kit\Samples\CustomAOICommand\CSharp\obj\Debug\CustomAOICommand.csproj.GenerateResource.Cache
