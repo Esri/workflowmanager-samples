@@ -49,7 +49,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-A copy of the license is available in the repository's [license.txt]( https://raw.github.com/Esri/quickstart-map-js/master/license.txt) file.
+A copy of the license is available in the repository's [license.txt]( https://github.com/ArcGIS/WMX---Samples/blob/master/License.txt) file.
 
 [](Esri Tags: WMX Desktop Java)
 [](Esri Language: C-Sharp)
