@@ -1,6 +1,6 @@
 # Workflow Manager-Samples
 
-Here are a set of simple samples that show you how to add different types of add ins and steps to your desktop application of WMX
+Simple samples that show you how to add different types of add ins and steps to your Workflow Manager desktop application.
 
 ## Features
 * CustomAOIContextMenu
@@ -23,8 +23,8 @@ Here are a set of simple samples that show you how to add different types of add
 
 ## Requirements
 
-* VS 2012 at least
-* .net framework 4.5
+* VS 2012 or later
+* .NET Framework 4.5
 
 ## Issues
 
@@ -49,7 +49,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-A copy of the license is available in the repository's [license.txt]( https://github.com/ArcGIS/WMX---Samples/blob/master/License.txt) file.
+A copy of the license is available in the repository's [License.txt](License.txt) file.
 
-[](Esri Tags: workflowmanager Desktop Java)
+[](Esri Tags: ArcGIS Workflow Manager Desktop Samples Java C#)
 [](Esri Language: C-Sharp)
