@@ -51,5 +51,5 @@ limitations under the License.
 
 A copy of the license is available in the repository's [license.txt]( https://github.com/ArcGIS/WMX---Samples/blob/master/License.txt) file.
 
-[](Esri Tags: WMX Desktop Java)
+[](Esri Tags: workflowmanager Desktop Java)
 [](Esri Language: C-Sharp)
