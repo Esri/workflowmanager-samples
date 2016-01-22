@@ -1,4 +1,4 @@
-# WMX-Samples
+# Workflow Manager-Samples
 
 Here are a set of simple samples that show you how to add different types of add ins and steps to your desktop application of WMX
 
