@@ -44,7 +44,24 @@ Requests python library. Requests is already included with ArcGIS Pro starting w
     is created as. This is found from the Dispatchers sub-item of the
     Workforce project item. You must manually display OBJECT ID field
     ![Dispatcher](doc/dispatcher.png)
-    5. **assignmentId** - This is the ID of the Assignment Type from Workforce
+    5. **assignmentId** - This is the ID of the Assignment Type from Workforce. To find this,
+    open the Service URL link from step ii above, and click the JSON link in the top left.
+    This displays the detailed information about the service. From this, find the ASSIGN_TYPE
+    coded value domain values and use the code value associated with the desired
+    Assignment Type.
+
+            "domain" :
+            {
+              "type" : "codedValue",
+              "name" : "ASSIGN_TYPE",
+              "codedValues" : [
+                {
+                  "name" : "Collect Data",
+                  "code" : 1
+                }
+              ]
+            }
+
     6. **description** - This is used to populate the description of the newly
     created Assignment.
     7. **jtcPath** - This can be used to override the Workflow Manager connection to use.
