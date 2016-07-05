@@ -114,10 +114,19 @@ class CreateAssignments(object):
 
         messages.addMessage("Getting job LOI")
         layerName = "tempLayer"
+        try:
+            arcpy.Delete_management(layerName)
+        except:
+            # Workaround for Pro
+            pass
         arcpy.GetJobAOI_wmx(jobId, layerName, jtc)
         # Need to do this otherwise the geometry contains all the features in the FC, not just the selected job
         geoms = arcpy.CopyFeatures_management(layerName, arcpy.Geometry())
-        arcpy.Delete_management(layerName)
+        try:
+            arcpy.Delete_management(layerName)
+        except:
+            # Workaround for Pro
+            pass
 
         if len(geoms) == 0:
             messages.addErrorMessage("No LOI associated with job")
