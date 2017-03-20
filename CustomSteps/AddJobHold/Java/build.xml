@@ -10,17 +10,16 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.?-->
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project basedir="." default="build" name="AddJobHold">
   <property name="target" value="1.8"/>
   <property name="source" value="1.8"/>
   <property name="jarOut" value="AddJobHold.jar"/>
 
   <!-- TODO: Update the classpath to include the correct locations of your java libraries. -->
-  <property name="arcobjectsJar" value="/Program Files (x86)/ArcGIS/Desktop10.4/java/lib/arcobjects.jar" />
-  <property name="workflowManagerJar" value="/Program Files (x86)/ArcGIS/wmx/Desktop10.4/java/arcgis_jtx.jar" />
+  <property name="arcobjectsJar" value="/Program Files (x86)/ArcGIS/Desktop10.5/java/lib/arcobjects.jar" />
+  <property name="workflowManagerJar" value="/Program Files (x86)/ArcGIS/wmx/Desktop10.5/java/arcgis_jtx.jar" />
   <!-- TODO: The manifest should contain the relative path from <ArcGIS Install>/java/lib/ext to the Workflow Manager JAR -->
-  <property name="workflowManagerJarManifest" value="../../../../wmx/Desktop10.4/java/arcgis_jtx.jar" />
+  <property name="workflowManagerJarManifest" value="../../../../wmx/Desktop10.5/java/arcgis_jtx.jar" />
 
   <path id="AddJobHold.classpath">
     <pathelement location="bin"/>
