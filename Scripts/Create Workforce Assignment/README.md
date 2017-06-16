@@ -38,6 +38,8 @@ Requests python library. Requests is already included with ArcGIS Pro starting w
 
         ![Assignments Details](doc/assignments.png)
 
+		- Add **/applyEdits** at the end of the Service URL link
+
     3. **jobID** - This should generally be the [Job:ID] token.
     It is used to populate the Work Order field in the created Assignment.
     4. **dispatcherId** - This is the ID of the dispatcher that the Assignments
