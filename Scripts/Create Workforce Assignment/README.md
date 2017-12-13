@@ -20,13 +20,13 @@ Deployment
 1. Download the python toolbox and save it locally
 2. If using ArcGIS Desktop or versions of ArcGIS Pro 1.2 or older, install the
 Requests python library. Requests is already included with ArcGIS Pro starting with 1.3
-2. Configure the Workflow Manager step arguments
+3. Configure the Workflow Manager step arguments
 
     ![Step Configuration](doc/step.png)
 
     1. Select the toolbox and tool from where you saved it in step 1
     2. **layerURL** - Configure to point to the Assignments feature service used by Workforce
-        - Search for the item within your Organization and open it
+        - Search for the Workforce project within your Organization and open it
 
         ![Item](doc/item.png)
 
@@ -71,6 +71,7 @@ Requests python library. Requests is already included with ArcGIS Pro starting w
     8. **objectIds** - This is an output parameter populated with the Object IDs
     of the newly created assignments. Advanced usage only
 
+Note: To run the geoprocessing tool, you must sign in to your organizational portal to be able to access feature services in the Workforce project.
 
 See Also:
 ---------
