@@ -26,7 +26,7 @@ Requests python library. Requests is already included with ArcGIS Pro starting w
 
     1. Select the toolbox and tool from where you saved it in step 1
     2. **layerURL** - Configure to point to the Assignments feature service used by Workforce
-        - Search for Workforce project within your Organization and open it
+        - Search for the Workforce project within your Organization and open it
 
         ![Item](doc/item.png)
 
@@ -71,7 +71,7 @@ Requests python library. Requests is already included with ArcGIS Pro starting w
     8. **objectIds** - This is an output parameter populated with the Object IDs
     of the newly created assignments. Advanced usage only
 
-Note: To run the geoprocessing tool, you must sign in to your organizational portal to be able to access feature services in Workforce project.
+Note: To run the geoprocessing tool, you must sign in to your organizational portal to be able to access feature services in the Workforce project.
 
 See Also:
 ---------
