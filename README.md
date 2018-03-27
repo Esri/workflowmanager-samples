@@ -3,7 +3,7 @@
 Simple samples that show you how to add different types of add ins and steps to your Workflow Manager desktop application.
 
 ## Features
-* CustomAOIContextMenu
+* ClearAOIContextMenu
 * CustomAOICommand
 * CustomJobTab
 * CustomNotifier
@@ -12,9 +12,11 @@ Simple samples that show you how to add different types of add ins and steps to 
 * EnvVariableParser
 * ImportADUsers
 * OverdueJobsNotification
+* RecreateWorkflow
 * ReportNotification
+* CreateWorkforceAssignment
 * SpatialNotificationWindowsService
-* Recreate Workflow
+
 
 ## Instructions
 
