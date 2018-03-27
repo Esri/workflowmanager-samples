@@ -14,6 +14,7 @@ Simple samples that show you how to add different types of add ins and steps to 
 * OverdueJobsNotification
 * ReportNotification
 * SpatialNotificationWindowsService
+* Recreate Workflow
 
 ## Instructions
 
