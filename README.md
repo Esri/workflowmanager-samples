@@ -22,7 +22,7 @@ Simple samples that show you how to add different types of add ins and steps to 
 ## Instructions
 
 1. Download the samples.
-2. Open the soluntion of the sample you want, and complie it.
+2. Open the solution of the sample you want, and compile it.
 3. Follow the readme file for that sample to install it
 
 ## Requirements
@@ -39,7 +39,7 @@ Find a bug or want to request a new feature?  Please let us know by submitting a
 Esri welcomes contributions from anyone and everyone. Please see our [guidelines for contributing](https://github.com/esri/contributing).
 
 ## Licensing
-Copyright 2015 Esri
+Copyright 2018 Esri
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
