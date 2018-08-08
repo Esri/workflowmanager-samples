@@ -21,9 +21,9 @@ Before you begin, ensure that the machine on which you are deploying the script 
     **Important:**  
     The `URL` parameter must include a trailing slash.
 
-6.  Update the `[USER]` parameter in the `[WORKFLOWMANAGER]` section with the Workflow Manager user account you want the script to use to move jobs to the next step when a Workforce assignment is completed.
+6.  Update the `USER` parameter in the `[WORKFLOWMANAGER]` section with the Workflow Manager user account you want the script to use to move jobs to the next step when a Workforce assignment is completed.
 
-7.  Update the `[USERNAME]` and `[PASSWORD]` parameters with the user account credentials you want to the script to use to log in to Workforce.
+7.  Update the `USERNAME` and `PASSWORD` parameters with the user account credentials you want to the script to use to log in to Workforce.
 
 8.  Update the `LOGFILE` parameter in the `[LOG]` section as necessary.
 
