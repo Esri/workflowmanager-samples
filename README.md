@@ -12,6 +12,7 @@ Simple samples that show you how to add different types of add ins and steps to 
 * [DockableWindow](./DockableWindow)
 * [EnvVariableParser](./EnvVariableParser)
 * [ImportADUsers](./ImportADUsers)
+* [MonitorWorkforce](./MonitorWorkforce)
 * [OverdueJobsNotification](./OverdueJobsNotification)
 * [RecreateWorkflow](./RecreateWorkflow)
 * [ReportNotification](./ReportNotification)
