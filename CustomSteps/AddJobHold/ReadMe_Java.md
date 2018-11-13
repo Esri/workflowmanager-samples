@@ -2,6 +2,8 @@
 
 * * *
 
+**Note**: Java custom steps are not supported starting in ArcGIS Workflow Manager 10.7.
+
 This sample demonstrates how to programmatically add a hold to a job.
 
 <table x-use-null-cells="" style="x-cell-content-align: top; width: 50%; border-spacing: 0px; border-spacing: 0px;" cellspacing="0" width="50%"><colgroup><col style="width: 50%;"> <col style="width: 50%;"></colgroup>
