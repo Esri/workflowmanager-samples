@@ -2,7 +2,7 @@
 
 * * *
 
-**Note**: Java custom steps are not supported starting in ArcGIS Workflow Manager 10.7.
+**Note**: Java custom steps are no longer supported starting in ArcGIS Workflow Manager 10.7.
 
 This sample demonstrates how to programmatically add a hold to a job.
 
