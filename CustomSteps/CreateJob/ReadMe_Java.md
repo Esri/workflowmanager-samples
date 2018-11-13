@@ -1,6 +1,7 @@
 Create Job Custom Step
 
 * * *
+**Note**: Java custom steps are no longer supported starting in ArcGIS Workflow Manager 10.7.
 
 Demonstrates how to create a new job and an implementation of an step argument editor.
 
