@@ -25,6 +25,17 @@ Simple samples that show you how to add different types of add ins and steps to 
 2. Open the solution of the sample you want, and compile it.
 3. Follow the readme file for that sample to install it
 
+### Server Deployment
+**.NET / C++**
+<br>
+  Some sample steps that do not have a UI component or do not require user interactions can be run on Server.
+1. Follow the instructions for compiling and running the sample step code on Desktop.
+2. Compile the sample step code using Workflow Manager Server DLLs: <br>`<ArcGISServerInstallFolder>\bin\JTX*.dll` <br>`<ArcGISServerInstallFolder>\WMX\Server<Version>\DotNet\*.dll`
+3. Register the sample step code DLL with ArcGIS Server using the `ESRIRegAsm` utility in `C:\Program Files\Common Files\ArcGIS\bin`
+4. Restart ArcGIS Server
+
+Workflow Manager Server should now be able to find and run the sample step.
+
 ## Requirements
 
 * VS 2012 or later
