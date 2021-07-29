@@ -1,0 +1,73 @@
+﻿<Window x:Class="RecreateWorkflowWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RecreateWorkflowWPF"
+        mc:Ignorable="d"
+        Title="Recreate Workflows" Height="447.14" Width="547.246">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="Padding" Value="3" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" LastChildFill="True" >
+            <TextBlock Text="Query (Where Clause)" DockPanel.Dock="Top" />
+            <TextBox Text="{Binding Query}" DockPanel.Dock="Top" TextWrapping="Wrap" AcceptsReturn="True" Height="100"/>
+
+            <Button Content="Query" DockPanel.Dock="Top" HorizontalAlignment="Left" Command="{Binding QueryCommand}" />
+            <TextBlock Text="Workflows to Recreate" DockPanel.Dock="Top" />
+
+            <Grid DockPanel.Dock="Bottom">
+                <StackPanel Grid.Column="0" Orientation="Horizontal" >
+                    <Button Content="Select All" Command="{Binding SelectCommand}" CommandParameter="true"/>
+                    <Button Content="Select None" Command="{Binding SelectCommand}" CommandParameter="false"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" >
+                    <Button Content="Recreate Workflows" Command="{Binding RecreateWorkflowCommand}"/>
+                </StackPanel>
+            </Grid>
+
+            <DataGrid ItemsSource="{Binding WorkflowsToRecreate}" Margin="5" DockPanel.Dock="Top" AutoGenerateColumns="False" 
+                      CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False">
+                <!--<DataGrid.RowDetailsTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Error}" TextWrapping="Wrap"
+                       HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="{Binding ShowError}"/>
+                    </DataTemplate>
+                </DataGrid.RowDetailsTemplate>-->
+                <!--<DataGrid.RowStyle>
+
+                    <Style TargetType="DataGridRow">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ShowError}" Value="true">
+                                <Setter Property="ToolTip">
+                                    <Setter.Value>
+                                        <TextBlock Text="{Binding Error}" />
+                                    </Setter.Value>
+                                </Setter>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.RowStyle>-->
+                <DataGrid.Columns>
+                    <DataGridCheckBoxColumn Header="" Binding="{Binding Selected}" />
+                    <DataGridTextColumn Header="Job Name" Binding="{Binding Name}" />
+                    <DataGridCheckBoxColumn Header="Recreated?" Binding="{Binding Recreated}" IsReadOnly="True"/>
+                    <DataGridCheckBoxColumn Header="Reset Step?" Binding="{Binding Reset}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Details" Binding="{Binding Details}" IsReadOnly="True" Width="*" />
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </DockPanel>
+
+    </Grid>
+</Window>
