@@ -2,28 +2,33 @@
 
 Simple samples that show you how to add different types of add ins and steps to your Workflow Manager desktop application.
 
-## Features
-* [ClearAOIContextMenu](/ClearAOIContextMenu)
-* [CreateWorkforceAssignment](./CreateWorkforceAssignment)
-* [CustomAOICommand](./CustomAOICommand)
-* [CustomJobTab](./CustomJobTab)
-* [CustomNotifier](./CustomNotifier)
-* [CustomSteps](./CustomSteps)
-* [DockableWindow](./DockableWindow)
-* [EnvVariableParser](./EnvVariableParser)
-* [ImportADUsers](./ImportADUsers)
-* [MonitorWorkforce](./MonitorWorkforce)
-* [OverdueJobsNotification](./OverdueJobsNotification)
-* [RecreateWorkflow](./RecreateWorkflow)
-* [ReportNotification](./ReportNotification)
-* [SpatialNotificationsWindowsService](./SpatialNotificationsWindowsService)
+## Instructions for Workflow Manager Python API Samples
 
+1. Open the PythonAPI samples and select which example you would like to see.
+2. Please check the online Python Documentation at: https://developers.arcgis.com/python/api-reference/arcgis.gis.workflowmanager.html
 
-## Instructions
+## Instructions for Workflow Manager Classic Examples
 
-1. Download the samples.
+1. Download the WorkflowManagerClassic samples.
 2. Open the solution of the sample you want, and compile it.
 3. Follow the readme file for that sample to install it
+
+
+## Features
+* [ClearAOIContextMenu](./WorkflowManagerClassic/ClearAOIContextMenu)
+* [CreateWorkforceAssignment](./WorkflowManagerClassic/CreateWorkforceAssignment)
+* [CustomAOICommand](./WorkflowManagerClassic/CustomAOICommand)
+* [CustomJobTab](./WorkflowManagerClassic/CustomJobTab)
+* [CustomNotifier](./WorkflowManagerClassic/CustomNotifier)
+* [CustomSteps](./WorkflowManagerClassic/CustomSteps)
+* [DockableWindow](./WorkflowManagerClassic/DockableWindow)
+* [EnvVariableParser](./WorkflowManagerClassic/EnvVariableParser)
+* [ImportADUsers](./WorkflowManagerClassic/ImportADUsers)
+* [MonitorWorkforce](./WorkflowManagerClassic/MonitorWorkforce)
+* [OverdueJobsNotification](./WorkflowManagerClassic/OverdueJobsNotification)
+* [RecreateWorkflow](./WorkflowManagerClassic/RecreateWorkflow)
+* [ReportNotification](./WorkflowManagerClassic/ReportNotification)
+* [SpatialNotificationsWindowsService](./WorkflowManagerClassic/SpatialNotificationsWindowsService)
 
 ### Server Deployment
 **.NET / C++**
