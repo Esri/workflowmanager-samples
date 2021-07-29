@@ -2,6 +2,18 @@
 
 Simple samples that show you how to add different types of add ins and steps to your Workflow Manager desktop application.
 
+## Instructions for Workflow Manager Python API Samples
+
+1. Open the Python API samples and select which example you would like to see.
+2. Please check the online Python Documentation at: https://developers.arcgis.com/python/api-reference/arcgis.gis.workflowmanager.html
+
+## Instructions for Workflow Manager Classic Examples
+
+1. Download the WorkflowManagerClassic samples.
+2. Open the solution of the sample you want, and compile it.
+3. Follow the readme file for that sample to install it
+
+
 ## Features
 * [ClearAOIContextMenu](./WorkflowManagerClassic/ClearAOIContextMenu)
 * [CreateWorkforceAssignment](./WorkflowManagerClassic/CreateWorkforceAssignment)
@@ -17,18 +29,6 @@ Simple samples that show you how to add different types of add ins and steps to 
 * [RecreateWorkflow](./WorkflowManagerClassic/RecreateWorkflow)
 * [ReportNotification](./WorkflowManagerClassic/ReportNotification)
 * [SpatialNotificationsWindowsService](./WorkflowManagerClassic/SpatialNotificationsWindowsService)
-
-
-## Instructions for Workflow Manager Python API Samples
-
-1. Open the Python API samples and select which example you would like to see.
-2. Please check the online Python Documentation at: https://developers.arcgis.com/python/api-reference/arcgis.gis.workflowmanager.html
-
-## Instructions for Workflow Manager Classic Examples
-
-1. Download the WorkflowManagerClassic samples.
-2. Open the solution of the sample you want, and compile it.
-3. Follow the readme file for that sample to install it
 
 ### Server Deployment
 **.NET / C++**
