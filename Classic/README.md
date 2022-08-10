@@ -3,7 +3,7 @@
 Simple samples that show you how to add different types of add ins and steps to your Workflow Manager desktop application.
 
 ## Features
-* [ClearAOIContextMenu](/ClearAOIContextMenu)
+* [ClearAOIContextMenu](./ClearAOIContextMenu)
 * [CreateWorkforceAssignment](./CreateWorkforceAssignment)
 * [CustomAOICommand](./CustomAOICommand)
 * [CustomJobTab](./CustomJobTab)
