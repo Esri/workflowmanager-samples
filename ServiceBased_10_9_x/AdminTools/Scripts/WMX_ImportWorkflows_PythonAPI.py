@@ -7,6 +7,7 @@
 #                   as there is not a table with the same name that exists in the service already.
 #
 # Author:      Tiffany Weintraub (tweintraub@esri.com) and Mark Torrey (mtorrey@esri.com)
+# Copyright:   (c) 2022 Esri
 #
 # Created:     11/4/2021
 # Updated:     
@@ -14,7 +15,6 @@
 import arcpy, os, json
 from arcgis.gis import GIS
 from arcgis.gis.workflowmanager import WorkflowManager
-from arcgis.gis.workflowmanager import JobManager
 import Config
 
 #------------------------------------------ Parameters ----------------------------------------------------
@@ -82,12 +82,6 @@ try:
                 new_id = [x.diagram_id for x in dest_wm.diagrams if x.diagram_name == d_name][0]
                 diagram_id_map.update({orig_id: new_id})
     
-    # diagram_id_map ={
-    #     "ZNqrZOc_R_irf3OSEuS8lw":"XcE8xPhATwagsBZnb1aWfw",
-    #     "WAhF_W63SrqLCzVjfucICQ":"accLgY_SSQ-xqFYuwbaWLg",
-    #     "3uqgE9AvSsqPFoTPSvzZbQ":"1bLzoZJyQWC2nB1C0h7JmA"
-    #     }
-
     
     # Import templates
     arcpy.AddMessage(f'\n\n')
@@ -145,7 +139,7 @@ try:
                                 assigned_type=j['assigned_type'], 
                                 description=j['description'], 
                                 state=j['state'], 
-                                # extended_property_table_definitions=j['extended_property_table_definitions']
+                                extended_property_table_definitions=j['extended_property_table_definitions']
                                 )
                             
                     arcpy.AddMessage(f'\t...{template_name} job template imported successfully with extended properties table(s)')
