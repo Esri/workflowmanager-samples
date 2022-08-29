@@ -6,10 +6,13 @@
 #               - Creates the missing diagrams and job templates in the destination workflow instance. Extended property table and field set up carries over as well.
 #
 # Author:      Tiffany Weintraub (tweintraub@esri.com)
-# Copyright:   (c) 2022 Esri
-#
 # Created:     2/10/2021
 # Updated:     2/11/2021
+#
+# COPYRIGHT © 2022 Esri
+# All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+# See https://github.com/Esri/workflowmanager-samples/blob/master/License.txt for details.
+#
 ##-----------------------------------------------------------------------------------------------
 # ------------------------------------------ Modules ------------------------------------------------------
 import arcpy

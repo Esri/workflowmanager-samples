@@ -7,10 +7,13 @@
 #                   as there is not a table with the same name that exists in the service already.
 #
 # Author:      Tiffany Weintraub (tweintraub@esri.com) and Mark Torrey (mtorrey@esri.com)
-# Copyright:   (c) 2022 Esri
-#
 # Created:     11/4/2021
 # Updated:     
+#
+# COPYRIGHT © 2022 Esri
+# All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+# See https://github.com/Esri/workflowmanager-samples/blob/master/License.txt for details.
+#
 ##---------------------------------------------------------------------------------------------------------
 import arcpy, os, json
 from arcgis.gis import GIS

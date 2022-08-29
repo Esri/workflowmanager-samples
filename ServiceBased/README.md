@@ -3,13 +3,19 @@
 Sample tools that help administer workflow items.
 
 ## Features
-* [AdminTools](./AdminTools/) - Toolbox with script tools that utilize the Python API to import, export, and transfer workflows.
+These sample tools are script tools that utilize the Python API to perform various tasks against the ArcGIS Workflow Manager workflow items. They are broken out into subfolders by version.
+
+   - The AdminTools.tbx contains script tools that allow workflow admins to import, export, and transfer workflows. 
+
+* [10_9_x](./10_9_x/) - These tools are compatible with ArcGIS Workflow Manager versions 10.9 and 10.9.1.
+* [11_x](./11_x/) - These tools are compatible with ArcGIS Workflow Manager versions 11.0 and later.
 
 
 ## Instructions
 
-1. Download the admin toolbox.
-2. Check the ReadMe file for requirements to use these tools.
+1. Ensure the requirements below are met on the machine where the admin tools will be ran.
+2. Download the admin toolbox and accompanying script files.
+3. Before running the admin tools, update the Config.py file with admin connection information for the workflow item and make sure it stays in the same location as the tool script files.
 
 ## Requirements
 

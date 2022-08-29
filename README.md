@@ -3,7 +3,7 @@
 Simple samples for Workflow Manager and Workflow Manager Classic.
 
 ## Workflow Manager
-The Workflow Manager samples <TBD>.
+The [Workflow Manager Service-based samples](./ServiceBased) are a set of tools that utilize the Workflow Manager Python API to perform administrative and processing tasks for workflow items.
 
 ## Workflow Manager Classic
 The [Workflow Manager Classic samples](./Classic) show you how to add different types of add ins and steps to your Workflow Manager desktop application.

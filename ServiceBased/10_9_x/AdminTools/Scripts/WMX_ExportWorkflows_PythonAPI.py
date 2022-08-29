@@ -4,10 +4,13 @@
 #               - Exports diagram and job template configurations from the workflow item into individual JSON files
 #
 # Author:      Tiffany Weintraub (tweintraub@esri.com) and Mark Torrey (mtorrey@esri.com)
-# Copyright:   (c) 2022 Esri
-#
 # Created:     11/4/2021
-# Updated:     
+# Updated:   
+# 
+# COPYRIGHT © 2022 Esri
+# All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+# See https://github.com/Esri/workflowmanager-samples/blob/master/License.txt for details.
+ 
 ##-----------------------------------------------------------------------------------------------
 # ------------------------------------------ Modules ------------------------------------------------------
 import arcpy, os, json
