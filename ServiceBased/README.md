@@ -10,6 +10,15 @@ These sample tools are script tools that utilize the Python API to perform vario
    - The AdminTools.zip contains script tools that allow workflow admins to import, export, and transfer workflows.
    - The RecPost_Tool.zip contains a script tool that may be published as a geoprocessing service to reconcile and post branch versions.
 
+* [Jupyter Notebook Examples](./Jupyter%20Notebook%20Examples/) - These tools are compatible with ArcGIS Workflow Manager versions 10.9 and 10.9.1.
+
+   - These examples demonstrate some of trickier Python API and how they can be used for tasks in ArcGIS Workflow Manager Items.
+   - The Workflow Manager - Automated Creations.html demonstrates how to create and retrieve automated creations
+   - The Workflow Manager - Copy Configuration.html demonstrates how to create a new Workflow item and populate it with configuration data from an existing Workflow item.
+   - The Workflow Manager - Create Jobs From Survey Responses.html demonstrates how to create a job in ArcGIS Workflow Manager for each response to a Survey 123 survey. It will query the survey data, and use that information to create a new job with a priority based on data in the survey, copy any attachments from the survey to the job, and link the job to the survey via extended properties
+   - The Workflow Manager - Creating and Updating Job Properties.html shows how to create and update job properties and extended properties.
+   - The Workflow Manager - Groups and Attachments.html demonstrates some calls around groups and attachments. 
+
 ## Instructions
 
 1. Ensure the requirements below are met on the machine where the admin tools will be ran.
