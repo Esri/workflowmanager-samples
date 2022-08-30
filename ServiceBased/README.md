@@ -5,9 +5,11 @@ Sample tools that help administer workflow items.
 ## Features
 These sample tools are script tools that utilize the Python API to perform various tasks against the ArcGIS Workflow Manager workflow items. They are broken out into subfolders by version.
 
-   - The AdminTools.tbx contains script tools that allow workflow admins to import, export, and transfer workflows. 
-
 * [10_9_x](./10_9_x/) - These tools are compatible with ArcGIS Workflow Manager versions 10.9 and 10.9.1.
+
+   - The AdminTools.zip contains script tools that allow workflow admins to import, export, and transfer workflows.
+   - The RecPost_Tool.zip contains a script tool that may be published as a geoprocessing service to reconcile and post branch versions.
+
 * [11_x](./11_x/) - These tools are compatible with ArcGIS Workflow Manager versions 11.0 and later.
 
 
