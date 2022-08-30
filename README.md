@@ -1,45 +1,12 @@
 # Workflow Manager-Samples
 
-Simple samples that show you how to add different types of add ins and steps to your Workflow Manager desktop application.
+Simple samples for Workflow Manager and Workflow Manager Classic.
 
-## Features
-* [ClearAOIContextMenu](/ClearAOIContextMenu)
-* [CreateWorkforceAssignment](./CreateWorkforceAssignment)
-* [CustomAOICommand](./CustomAOICommand)
-* [CustomJobTab](./CustomJobTab)
-* [CustomNotifier](./CustomNotifier)
-* [CustomSteps](./CustomSteps)
-* [DockableWindow](./DockableWindow)
-* [EnvVariableParser](./EnvVariableParser)
-* [ImportADUsers](./ImportADUsers)
-* [MonitorWorkforce](./MonitorWorkforce)
-* [OverdueJobsNotification](./OverdueJobsNotification)
-* [RecreateWorkflow](./RecreateWorkflow)
-* [ReportNotification](./ReportNotification)
-* [SpatialNotificationsWindowsService](./SpatialNotificationsWindowsService)
+## Workflow Manager
+The [Workflow Manager Service-based samples](./ServiceBased) are a set of tools that utilize the Workflow Manager Python API to perform administrative and processing tasks for workflow items.
 
-
-## Instructions
-
-1. Download the samples.
-2. Open the solution of the sample you want, and compile it.
-3. Follow the readme file for that sample to install it
-
-### Server Deployment
-**.NET / C++**
-<br>
-  Some sample steps that do not have a UI component or do not require user interactions can be run on Server.
-1. Follow the instructions for compiling and running the sample step code on Desktop.
-2. Compile the sample step code using Workflow Manager Server DLLs: <br>`<ArcGISServerInstallFolder>\bin\JTX*.dll` <br>`<ArcGISServerInstallFolder>\WMX\Server<Version>\DotNet\*.dll`
-3. Register the sample step code DLL with ArcGIS Server using the `ESRIRegAsm` utility in `C:\Program Files\Common Files\ArcGIS\bin`
-4. Restart ArcGIS Server
-
-Workflow Manager Server should now be able to find and run the sample step.
-
-## Requirements
-
-* VS 2012 or later
-* .NET Framework 4.5
+## Workflow Manager Classic
+The [Workflow Manager Classic samples](./Classic) show you how to add different types of add ins and steps to your Workflow Manager desktop application.
 
 ## Issues
 
@@ -50,7 +17,7 @@ Find a bug or want to request a new feature?  Please let us know by submitting a
 Esri welcomes contributions from anyone and everyone. Please see our [guidelines for contributing](https://github.com/esri/contributing).
 
 ## Licensing
-Copyright 2018 Esri
+Copyright 2022 Esri
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
