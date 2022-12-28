@@ -2,16 +2,23 @@
 
 Sample tools that help administer workflow items.
 
-## Tools
+## Features
 These sample tools are script tools that utilize the Python API to perform various tasks against the ArcGIS Workflow Manager workflow items. 
-
-* [10_9_x](./10_9_x/) - These tools are compatible with ArcGIS Workflow Manager versions 10.9 and 10.9.1.
 
    - The AdminTools.zip contains script tools that allow workflow admins to import, export, and transfer workflows.
    - The RecPost_Tool.zip contains a script tool that may be published as a geoprocessing service to reconcile and post branch versions.
 
-* [Any](./Any/) - These tools are compatible with any version of ArcGIS Workflow Manager
-   - The JobProgressCleanup script deletes extraneous internal records that can adversely impact Job search performance 
+## Instructions
+
+1. Ensure the requirements below are met on the machine where the admin tools will be ran.
+2. Download the admin toolbox and accompanying script files.
+3. Before running the admin tools, update the Config.py file with admin connection information for the workflow item and make sure it stays in the same location as the tool script files.
+
+## Requirements
+
+* 10_9_x:
+   - ArcGIS API for Python 2.0.x
+   - ArcGIS Pro 2.8 - 2.9
 
 ## Issues
 
