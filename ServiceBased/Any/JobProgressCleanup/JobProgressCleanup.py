@@ -141,7 +141,10 @@ def delete_jobs(args, jobs_table, job_progress_table):
         where = f"job_id in ({','.join(job_ids)})"
         logging.debug(f'Deleting job progress where {where}')
         result = job_progress_table.delete_features(where=where, rollback_on_failure=False, return_delete_results=False)
-        if not (result['deleteResults'] and result['deleteResults']['success']):
+        logging.info(f'Result = {result}')
+        # Results are different in different versions of Python Api for ArcGIS, so handle both types of results
+        if not ('success' in result and result['success']) and \
+                not ('deleteResults' in result and all(x['success'] for x in result['deleteResults'])):
             successful = False
 
     end = timer()
