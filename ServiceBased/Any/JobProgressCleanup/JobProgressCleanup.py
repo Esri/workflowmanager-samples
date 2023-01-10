@@ -1,3 +1,7 @@
+# COPYRIGHT © 2023 Esri
+# All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+# See https://github.com/Esri/workflowmanager-samples/blob/master/License.txt for details.
+
 import argparse
 import logging
 from math import ceil
