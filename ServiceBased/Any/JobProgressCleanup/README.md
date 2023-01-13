@@ -14,11 +14,11 @@ issues in Job search.
 To get detailed usage information
 > python JobProgressCleanup.py --help
 
-To run for the first time and delete job progress for jobs closed at least 7 days (with verbose output)
+progress for jobs closed at least 7 days (with verbose output)
 > python JobProgressCleanup.py --endAge 7 --username _username_ --password _password_ --profile _profileName_ -v _portalUrl_ _itemId_
 
 To subsequently run and delete job progress for jobs closed between 21 and 7 days
-> python JobProgressCleanup.py --startAge --endAge 7 --profile _profileName_ _portalUrl_ _itemId_ 
+> python JobProgressCleanup.py --startAge 21 --endAge 7 --profile _profileName_ _portalUrl_ _itemId_ 
 
 ## Requirements
 
