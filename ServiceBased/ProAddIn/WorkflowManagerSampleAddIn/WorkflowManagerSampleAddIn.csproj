@@ -82,7 +82,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="ArcGIS.Desktop.Workflow.Client">
-      <HintPath>D:\ArcGIS\bin\Extensions\Workflow\ArcGIS.Desktop.Workflow.Client.dll</HintPath>
+      <HintPath>C:\Program Files\ArcGIS\Pro\bin\Extensions\Workflow\ArcGIS.Desktop.Workflow.Client.dll</HintPath>
     </Reference>
     <Reference Include="ESRI.ArcGIS.ItemIndex">
       <HintPath>C:\Program Files\ArcGIS\Pro\bin\ESRI.ArcGIS.ItemIndex.dll</HintPath>
