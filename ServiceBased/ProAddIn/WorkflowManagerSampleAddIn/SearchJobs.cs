@@ -34,7 +34,18 @@ namespace WorkflowManagerSampleAddIn
                     var searchResult = jobsManager.SearchJobs(
                         new ArcGIS.Desktop.Workflow.Client.Models.SearchQuery()
                         {
-                            Q = "closed=0"
+                            Q = "closed=0",
+                            SortFields = new List<ArcGIS.Desktop.Workflow.Client.Models.SortField>()
+                            {
+                              new ArcGIS.Desktop.Workflow.Client.Models.SortField()
+                              {
+                                FieldName = "jobName", SortOrder = ArcGIS.Desktop.Workflow.Client.Models.SortOrder.Asc
+                              },
+                              new ArcGIS.Desktop.Workflow.Client.Models.SortField()
+                              {
+                                FieldName = "priority", SortOrder = ArcGIS.Desktop.Workflow.Client.Models.SortOrder.Desc
+                              }
+                            }
                         });
                     var title = "Getting the Job information and properties";
                     var msg = $"Search Results are modeled as:\n {searchResult} \n\n For example, searchResult.Num: {searchResult.Num}";
