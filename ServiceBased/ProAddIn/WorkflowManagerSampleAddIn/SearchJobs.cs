@@ -23,9 +23,8 @@ namespace WorkflowManagerSampleAddIn
     {
         protected override void OnClick()
         {
-            // Get the Workflow Manager server url
+            // Get an instance of the JobsManager
             var jobsManager = WorkflowClientModule.JobsManager;
-            var jobId = "HSoSXIeFSmu3nuV4rrEzsA";
 
             QueuedTask.Run(() =>
             {
@@ -54,7 +53,7 @@ namespace WorkflowManagerSampleAddIn
                 catch (Exception ex)
                 {
                     var title = "Failed to get the job information";
-                    var msg = $"\nJobId: {jobId}\n" + $"\nError: {ex.Message}";
+                    var msg = $"\nError: {ex.Message}";
                     MessageBox.Show(msg, title);
                 }
             });

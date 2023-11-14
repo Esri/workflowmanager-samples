@@ -26,6 +26,8 @@ namespace WorkflowManagerSampleAddIn
         {
             // Get the Workflow Manager server url
             var jobsManager = WorkflowClientModule.JobsManager;
+
+            // Update the jobId and stepId information for your workflow item
             var jobId = "bX7L4B9KSpqwjbsMgfz0vQ";
             var stepIds = new List<string> { "df4c8d20-5c99-457f-0be1-21fa8f830760" }; // Set one or more current steps
             var stepIdStr = string.Join(",", stepIds);
@@ -34,6 +36,7 @@ namespace WorkflowManagerSampleAddIn
             {
                 try
                 {
+                    // Run specific current steps on the job
                     jobsManager.RunSteps(jobId, stepIds);
                     var title = "Running Step(s) on a Job";
                     var msg = $"\nJobId: {jobId}\nStepId(s): {stepIdStr}";

@@ -1,6 +1,6 @@
 # Workflow Manager ArcGIS Pro Add-In Sample
 
-This ArcGIS Pro Add-In sample utilizes the Workflow Manager Pro SDK to perform various operations against the ArcGIS Workflow Manager workflow items.
+This ArcGIS Pro Add-In sample utilizes the Workflow Manager Pro SDK to perform various operations against ArcGIS Workflow Manager workflow items.
 
 ## Prerequisite
 Setup a development environment for building a Pro Add-In.
@@ -13,7 +13,9 @@ Refer to the ArcGIS Pro SDK [Build your first add-in - Prerequisites](https://de
    * WorkflowManagerSampleAddIn.csproj
    * Config.daml
    * launchSettings.json
-3. Build and run the project in Visual Studio
+3. Update jobId and stepId information for your workflow item
+   * Some samples include specific jobId and stepId properties which are unique to a workflow item. Update these values before running these samples.
+4. Build and run the project in Visual Studio
    * The Workflow Manager Add-In should now be visible in ArcGIS Pro under the _Workflow Manager Add-In_ tab
    * The built add-in will be located at _C:\Users\<username>\Documents\ArcGIS\AddIns\ArcGISPro_
 
