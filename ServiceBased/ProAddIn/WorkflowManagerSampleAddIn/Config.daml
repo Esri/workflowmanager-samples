@@ -5,7 +5,7 @@
 	<Image>Images\AddinDesktop32.png</Image>
 	<Author>Lalaine Lam</Author>
 	<Company>Esri</Company>
-	<Date>5/19/2023 10:24:25 AM</Date>
+	<Date>11/14/2023 10:48:25 AM</Date>
 	<Subject>Workflow Manager</Subject>
 	<!-- Note subject can be one or more of these topics:
                 Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
@@ -17,6 +17,7 @@
 			<tab id="WorkflowManagerSampleAddIn_Tab1" caption="Workflow Manager Add-Ins">
 				<group refID="WorkflowManagerSampleAddIn_Group_Info" />
 				<group refID="WorkflowManagerSampleAddIn_Group_Execution" />
+				<group refID="WorkflowManagerSampleAddIn_Group_Events" />
 			</tab>
 		</tabs>
 		<groups>
@@ -36,47 +37,62 @@
 				<button refID="WorkflowManagerSampleAddIn_RunSpecificStepsButton" size="large" />
 				<button refID="WorkflowManagerSampleAddin_UpdateStepAssignments" size="large" />
 			</group>
+			<group id="WorkflowManagerSampleAddIn_Group_Events" caption="Events" appearsOnAddInTab="false">
+				<button refID="WorkflowManagerSampleAddIn_SubscribeToEventButton" size="large" />
+				<button refID="WorkflowManagerSampleAddIn_UnsubscribeToEventButton" size="large" />
+			</group>
 		</groups>
 		<controls>
 			<!-- add your controls here -->
-			<button id="WorkflowManagerSampleAddIn_GetConnectionInfoButton" caption="GetConnectionInfo" className="GetConnectionInfoButton" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo32.png">
+			<button id="WorkflowManagerSampleAddIn_GetConnectionInfoButton" caption="Get Connection Info" className="GetConnectionInfoButton" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo32.png">
 				<tooltip heading="Workflow Manager Connection Info">
 					Get Workflow Manager connection info for the project<disabledText />
 				</tooltip>
 			</button>
-			<button id="WorkflowManagerSampleAddIn_ActiveMapJobIdButton" caption="ActiveMapJobId" className="ActiveMapJobIdButton" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo32.png">
+			<button id="WorkflowManagerSampleAddIn_ActiveMapJobIdButton" caption="Active Map JobId" className="ActiveMapJobIdButton" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo32.png">
 				<tooltip heading="Active Map Job Id">
 					Get job Id associate with the active map<disabledText />
 				</tooltip>
 			</button>
-			<button id="WorkflowManagerSampleAddIn_RunStepsButton" caption="RunSteps" className="RunStepsButton" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo32.png">
+			<button id="WorkflowManagerSampleAddIn_RunStepsButton" caption="Run Steps" className="RunStepsButton" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo32.png">
 				<tooltip heading="Run Step(s)">
 					Run all current step(s) on a job<disabledText />
 				</tooltip>
 			</button>
-			<button id="WorkflowManagerSampleAddIn_RunSpecificStepsButton" caption="RunSpecificSteps" className="RunSpecificStepsButton" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo32.png">
+			<button id="WorkflowManagerSampleAddIn_RunSpecificStepsButton" caption="Run Specific Steps" className="RunSpecificStepsButton" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo32.png">
 				<tooltip heading="Run Specific Step(s)">
 					Run specific current step(s) on a job<disabledText />
 				</tooltip>
 			</button>
-			<button id="WorkflowManagerSampleAddin_UpdateStepAssignments" caption="UpdateStepAssignments" className="UpdateStepAssignments" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo32.png">
+			<button id="WorkflowManagerSampleAddin_UpdateStepAssignments" caption="Update Step Assignments" className="UpdateStepAssignments" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo32.png">
 				<tooltip heading="Update Steps and Assignments">
 					Update the current step and the assignments on steps<disabledText />
 				</tooltip>
 			</button>
-			<button id="WorkflowManagerSampleAddIn_GetJobInformation" caption="GetJobInformation" className="GetJobInformation" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo32.png">
+			<button id="WorkflowManagerSampleAddIn_GetJobInformation" caption="Get Job Information" className="GetJobInformation" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo32.png">
 				<tooltip heading="Get Job Information">
 					Get the job information, including extended properties and holds<disabledText />
 				</tooltip>
 			</button>
-			<button id="WorkflowManagerSampleAddIn_SearchJobs" caption="SearchJobs" className="SearchJobs" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo32.png">
+			<button id="WorkflowManagerSampleAddIn_SearchJobs" caption="Search Jobs" className="SearchJobs" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo32.png">
 				<tooltip heading="Search Jobs">
 					Search the jobs based of a search query<disabledText />
 				</tooltip>
 			</button>
-			<button id="WorkflowManagerSampleAddIn_JobStatistics" caption="JobStatistics" className="JobStatistics" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo32.png">
+			<button id="WorkflowManagerSampleAddIn_JobStatistics" caption="Job Statistics" className="JobStatistics" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo32.png">
 				<tooltip heading="Get Job Statistics">
 					Get statistics on the job based on a query<disabledText />
+				</tooltip>
+			</button>
+
+			<button id="WorkflowManagerSampleAddIn_SubscribeToEventButton" caption="Subscribe To Connection Event" className="SubscribeWorkflowEventButton" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo32.png">
+				<tooltip heading="Subscribe to Workflow Connection Event">
+					Subscribe to workflow connection events to get notified of connection changes.<disabledText />
+				</tooltip>
+			</button>
+			<button id="WorkflowManagerSampleAddIn_UnsubscribeToEventButton" caption="Unsubscribe To Connection Event" className="UnsubscribeWorkflowEventButton" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo32.png">
+				<tooltip heading="Unsubscribe to Workflow Connection Event">
+					Unsubscribe to workflow connection events.<disabledText />
 				</tooltip>
 			</button>
 		</controls>

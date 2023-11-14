@@ -1,5 +1,6 @@
 ﻿using ArcGIS.Core.CIM;
 using ArcGIS.Core.Data;
+using ArcGIS.Core.Events;
 using ArcGIS.Core.Geometry;
 using ArcGIS.Desktop.Catalog;
 using ArcGIS.Desktop.Core;
@@ -43,5 +44,10 @@ namespace WorkflowManagerSampleAddIn
 
         #endregion Overrides
 
+    }
+
+    internal static class ModuleData
+    {
+        public static SubscriptionToken WorkflowConnectionSubscriptionToken { get; set; }
     }
 }
