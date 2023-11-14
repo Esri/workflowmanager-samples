@@ -1,11 +1,12 @@
 ﻿<ArcGIS defaultAssembly="WorkflowManagerSampleAddIn.dll" defaultNamespace="WorkflowManagerSampleAddIn" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
-<AddInInfo id="{162b60c3-d569-4c9c-a4b2-99e36a42b78e}" version="1.0" desktopVersion="3.2.48344">
+<AddInInfo id="{162b60c3-d569-4c9c-a4b2-99e36a42b78e}" version="1.0" desktopVersion="3.2.49743">
 	<Name>WorkflowManagerSampleAddIns</Name>
 	<Description>Sample Add-Ins for WorkflowManager</Description>
 	<Image>Images\AddinDesktop32.png</Image>
-	<Author>Lalaine Lam</Author>
+	<Author>ArcGIS Workflow Manager</Author>
 	<Company>Esri</Company>
 	<Date>11/14/2023 10:48:25 AM</Date>
+	<Date>11/14/2023 10:24:25 AM</Date>
 	<Subject>Workflow Manager</Subject>
 	<!-- Note subject can be one or more of these topics:
                 Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->

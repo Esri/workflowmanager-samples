@@ -24,7 +24,7 @@ namespace WorkflowManagerSampleAddIn
     {
         protected override void OnClick()
         {
-            // determine if there is an active Workflow Manager connection
+            // Determine if there is an active Workflow Manager connection
             var isConnected = WorkflowClientModule.IsConnected;
 
             // Get the Workflow Manager item Id

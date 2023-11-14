@@ -23,14 +23,14 @@ namespace WorkflowManagerSampleAddIn
     {
         protected override void OnClick()
         {
-            // Get the Workflow Manager server url
+            // Get an instance of the JobsManager
             var jobsManager = WorkflowClientModule.JobsManager;
-            var jobId = "HSoSXIeFSmu3nuV4rrEzsA";
 
             QueuedTask.Run(() =>
             {
                 try
                 {
+                    // Get job statistics information for all open jobs
                     var jobStats = jobsManager.CalculateJobStatistics(new ArcGIS.Desktop.Workflow.Client.Models.JobStatisticsQuery()
                     {
                         Q = "closed=0"
@@ -41,9 +41,8 @@ namespace WorkflowManagerSampleAddIn
                 }
                 catch (Exception ex)
                 {
-                    var title = "Failed to get the job information";
-                    var msg = $"\nJobId: {jobId}\n"
-                        + $"\nError: {ex.Message}";
+                    var title = "Failed to get the job statistics information";
+                    var msg = $"\nError: {ex.Message}";
                     MessageBox.Show(msg, title);
                 }
             });

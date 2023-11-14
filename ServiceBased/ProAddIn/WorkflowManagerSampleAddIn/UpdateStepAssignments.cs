@@ -23,11 +23,11 @@ namespace WorkflowManagerSampleAddIn
     {
         protected override void OnClick()
         {
-
             // Get the Workflow Manager server url
             var jobsManager = WorkflowClientModule.JobsManager;
-            var jobId = "3AzCO4YHSrus8Ck6fgSn9w";
 
+            // Update the jobId and stepId information for your workflow item
+            var jobId = "3AzCO4YHSrus8Ck6fgSn9w";
             var stepOneId = "aeccabed-cc0c-442f-b7f5-566ff0ed9403";
             var stepTwoId = "eb472524-1908-42a9-a64c-2fd4076055db";
             var stepThreeId = "943932bc-a855-4d58-92e9-87026c829ecd";
