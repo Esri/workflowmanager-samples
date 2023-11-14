@@ -3,7 +3,9 @@
 Simple samples for Workflow Manager and Workflow Manager Classic.
 
 ## Workflow Manager
-The [Workflow Manager Service-based samples](./ServiceBased) are a set of tools that utilize the Workflow Manager Python API to perform administrative and processing tasks for workflow items.
+The [Workflow Manager Service-based samples](./ServiceBased) includes:
+* Set of tools that utilize the Workflow Manager Python API to perform administrative and processing tasks for workflow items
+* ArcGIS Pro Add-In sample which utilizes the Workflow Manager Pro SDK.
 
 ## Workflow Manager Classic
 The [Workflow Manager Classic samples](./Classic) show you how to add different types of add ins and steps to your Workflow Manager desktop application.
@@ -17,7 +19,7 @@ Find a bug or want to request a new feature?  Please let us know by submitting a
 Esri welcomes contributions from anyone and everyone. Please see our [guidelines for contributing](https://github.com/esri/contributing).
 
 ## Licensing
-Copyright 2022 Esri
+Copyright 2023 Esri
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

@@ -1,8 +1,8 @@
 # Workflow Manager-Samples
 
-Sample tools that help administer workflow items.
+Sample tools that help administer workflow items and Pro Add-In sample.
 
-## Tools
+## Python API Tools
 These sample tools are script tools that utilize the Python API to perform various tasks against the ArcGIS Workflow Manager workflow items. 
 
 * [10_9_x](./10_9_x/) - These tools are compatible with ArcGIS Workflow Manager versions 10.9 and 10.9.1.
@@ -12,6 +12,10 @@ These sample tools are script tools that utilize the Python API to perform vario
 
 * [Any](./Any/) - These tools are compatible with any version of ArcGIS Workflow Manager
    - The JobProgressCleanup script deletes extraneous internal records that can adversely impact Job search performance 
+
+## Pro Add-In Sample
+
+* [Pro Add-In](./ProAddIn/) - This Pro Add-In sample utilizes the Workflow Manager Pro SDK to perform various operations against the ArcGIS Workflow Manager workflow items.
 
 ## Issues
 
