@@ -41,7 +41,31 @@ namespace WorkflowManagerSampleAddIn
             return true;
         }
 
-        #endregion Overrides
+        /// <summary>
+        /// Override this method to allow execution of DAML commands specified in this module.
+        /// This is needed to run commands using the Open Pro Project Items step.
+        /// </summary>
+        /// <param name="id">The DAML control identifier.</param>
+        /// <returns>A user defined function, with arguments, that will execute asynchronously when invoked.</returns>
+        protected override Func<Task> ExecuteCommand(string id)
+        {
+            return () => QueuedTask.Run(() =>
+            {
+                try
+                {
+                    // Run the command specified by the id
+                    IPlugInWrapper wrapper = FrameworkApplication.GetPlugInWrapper(id);
+                    var command = wrapper as ICommand;
+                    if ((command != null) && command.CanExecute(null))
+                        command.Execute(null);
+                }
+                catch (System.Exception e)
+                {
+                    // ArcGIS.Desktop.Framework.Dialogs.MessageBox.Show($"ERROR: {e}", "Error running command");
+                }
+            });
+        }
 
+        #endregion Overrides
     }
 }
