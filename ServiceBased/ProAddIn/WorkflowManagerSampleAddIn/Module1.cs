@@ -46,7 +46,7 @@ namespace WorkflowManagerSampleAddIn
         /// This is needed to run commands using the Open Pro Project Items step.
         /// </summary>
         /// <param name="id">The DAML control identifier.</param>
-        /// <returns>A user defined function, with arguments, that will execute asynchronously when invoked.</returns>
+        /// <returns>A user defined function that will execute asynchronously when invoked.</returns>
         protected override Func<Task> ExecuteCommand(string id)
         {
             return () => QueuedTask.Run(() =>
