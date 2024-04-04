@@ -55,13 +55,13 @@ namespace WorkflowManagerSampleAddIn
                 {
                     // Run the command specified by the id
                     IPlugInWrapper wrapper = FrameworkApplication.GetPlugInWrapper(id);
-                    var command = wrapper as ICommand;
+                    ICommand command = wrapper as ICommand;
                     if ((command != null) && command.CanExecute(null))
                         command.Execute(null);
                 }
-                catch (System.Exception e)
+                catch (Exception e)
                 {
-                    // ArcGIS.Desktop.Framework.Dialogs.MessageBox.Show($"ERROR: {e}", "Error running command");
+                    ArcGIS.Desktop.Framework.Dialogs.MessageBox.Show($"ERROR: {e}", "Error running command");
                 }
             });
         }
