@@ -27,58 +27,67 @@ namespace WorkflowManagerSampleAddIn
             var jobsManager = WorkflowClientModule.JobsManager;
 
             // Update the jobId and stepId information for your workflow item
-            var jobId = "3AzCO4YHSrus8Ck6fgSn9w";
-            var stepOneId = "aeccabed-cc0c-442f-b7f5-566ff0ed9403";
-            var stepTwoId = "eb472524-1908-42a9-a64c-2fd4076055db";
-            var stepThreeId = "943932bc-a855-4d58-92e9-87026c829ecd";
+            var jobId = Module1.Current.JobId ?? "3AzCO4YHSrus8Ck6fgSn9w";
+            string stepId = null;
+
             QueuedTask.Run(() =>
             {
                 try
                 {
-                    jobsManager.AssignCurrentStep(jobId, ArcGIS.Desktop.Workflow.Client.Models.AssignedType.User, "manager_one");
-                    var title = "Assigning the current step in the job to another user";
-                    var msg = $"\nJobId: {jobId}\nStepId(s): {stepOneId}";
+                    // Get current steps on the job
+                    var job = jobsManager.GetJob(jobId);
+                    var currentSteps = job.CurrentSteps;
+                    if (currentSteps == null || currentSteps.Count < 1)
+                    {
+                        var title = "Failed Retrieving Current Step(s) on a Job";
+                        var msg = $"\nJobId: {jobId}\n";
+                        MessageBox.Show(msg, title);
+                        return;
+                    }
+
+                    stepId = currentSteps[0].StepId; 
+                }
+                catch (Exception ex)
+                {
+                    var title = "Failed Retrieving Current Step(s) on a Job";
+                    var msg = $"\nJobId: {jobId}\n"
+                        + $"\nError: {ex.Message}";
+                    MessageBox.Show(msg, title);
+                    return;
+                }
+
+                var assignedToUser = "admin";
+                try
+                {
+                    jobsManager.AssignCurrentStep(jobId, ArcGIS.Desktop.Workflow.Client.Models.AssignedType.User, "admin");
+                    var title = "Assigned the current step in the job to another user";
+                    var msg = $"\nJobId: {jobId}\nUser: {assignedToUser}";
                     MessageBox.Show(msg, title);
                 }
                 catch (Exception ex)
                 {
                     var title = "Failed to assign the current step to another user";
-                    var msg = $"\nJobId: {jobId}\nStepId(s): {stepOneId}"
+                    var msg = $"\nJobId: {jobId}"
                         + $"\nError: {ex.Message}";
                     MessageBox.Show(msg, title);
                 }
 
+                assignedToUser = "testuser";
                 try
                 {
-                    jobsManager.AssignStep(jobId, stepOneId, ArcGIS.Desktop.Workflow.Client.Models.AssignedType.User, "admin");
-                    var title = "Assigning a step in the job to another user";
-                    var msg = $"\nJobId: {jobId}\nStepId(s): {stepOneId}";
+                    jobsManager.AssignStep(jobId, stepId, ArcGIS.Desktop.Workflow.Client.Models.AssignedType.User, "admin");
+                    var title = "Assigned a specific current step in the job to another user";
+                    var msg = $"\nJobId: {jobId}\nStepId: {stepId}\nUser: {assignedToUser}";
                     MessageBox.Show(msg, title);
                 }
                 catch (Exception ex)
                 {
                     var title = "Failed to assign a step to another user";
-                    var msg = $"\nJobId: {jobId}\nStepId(s): {stepOneId}"
-                        + $"\nError: {ex.Message}";
-                    MessageBox.Show(msg, title);
-                }
-
-                try
-                {
-                    jobsManager.SetCurrentStep(jobId, stepThreeId);
-                    var title = "Set the Current step to a different step.";
-                    var msg = $"\nJobId: {jobId}\nStepId(s): {stepThreeId}";
-                    MessageBox.Show(msg, title);
-                }
-                catch (Exception ex)
-                {
-                    var title = "Failed to set the current step";
-                    var msg = $"\nJobId: {jobId}\nStepId(s): {stepThreeId}"
+                    var msg = $"\nJobId: {jobId}\nStepId: {stepId}\nUser: {assignedToUser}"
                         + $"\nError: {ex.Message}";
                     MessageBox.Show(msg, title);
                 }
             });
-
         }
     }
 }
