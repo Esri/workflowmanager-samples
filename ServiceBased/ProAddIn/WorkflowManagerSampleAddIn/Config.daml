@@ -34,8 +34,8 @@
 				<!-- host controls within groups -->
 				<button refID="WorkflowManagerSampleAddIn_RunSteps" size="large" />
 				<button refID="WorkflowManagerSampleAddIn_RunSpecificSteps" size="large" />
-				<button refID="WorkflowManagerSampleAddin_UpdateStepAssignments" size="large" />
-				<button refID="WorkflowManagerSampleAddin_SetCurrentStep" size="large" />
+				<button refID="WorkflowManagerSampleAddIn_UpdateStepAssignments" size="large" />
+				<button refID="WorkflowManagerSampleAddIn_SetCurrentStep" size="large" />
 			</group>
 		</groups>
 		<controls>
@@ -60,12 +60,12 @@
 					Run specific current step(s) on a job<disabledText />
 				</tooltip>
 			</button>
-			<button id="WorkflowManagerSampleAddin_UpdateStepAssignments" caption="UpdateStepAssignments" className="UpdateStepAssignments" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo32.png">
+			<button id="WorkflowManagerSampleAddIn_UpdateStepAssignments" caption="UpdateStepAssignments" className="UpdateStepAssignments" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo32.png">
 				<tooltip heading="Update Steps and Assignments">
 					Update the current step and the assignments on steps<disabledText />
 				</tooltip>
 			</button>
-			<button id="WorkflowManagerSampleAddin_SetCurrentStep" caption="SetCurrentStep" className="SetCurrentStep" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo32.png">
+			<button id="WorkflowManagerSampleAddIn_SetCurrentStep" caption="SetCurrentStep" className="SetCurrentStep" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/WorkflowManagerLogo32.png">
 				<tooltip heading="Set Current Step">
 					Update the current step to another step in the job<disabledText />
 				</tooltip>
