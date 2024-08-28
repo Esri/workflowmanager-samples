@@ -27,6 +27,7 @@ namespace WorkflowManagerSampleAddIn
             var jobsManager = WorkflowClientModule.JobsManager;
 
             // Update the jobId information for your workflow item
+            // Use the jobId provided from running the Open Pro Project Items step or provide a jobId
             var jobId = Module1.Current.JobId ?? "HSoSXIeFSmu3nuV4rrEzsA";
 
             QueuedTask.Run(() =>

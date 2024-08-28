@@ -27,7 +27,7 @@ namespace WorkflowManagerSampleAddIn
             var jobsManager = WorkflowClientModule.JobsManager;
 
             // Update the jobId and stepId information for your workflow item
-            var jobId = Module1.Current.JobId ?? "3AzCO4YHSrus8Ck6fgSn9w";
+            var jobId = "3AzCO4YHSrus8Ck6fgSn9w";
             string stepId = null;
 
             QueuedTask.Run(() =>

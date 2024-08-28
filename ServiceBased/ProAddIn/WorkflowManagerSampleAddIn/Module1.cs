@@ -30,7 +30,7 @@ namespace WorkflowManagerSampleAddIn
         /// </summary>
         public static Module1 Current => _this ??= (Module1)FrameworkApplication.FindModule("WorkflowManagerSampleAddIn_Module");
 
-        // Store the jobId info from step execution
+        // Store the jobId info from the Open Pro Project Items step execution
         internal string JobId { get; private set; }
 
         #region Overrides
