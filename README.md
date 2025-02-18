@@ -1,7 +1,4 @@
-# ⛔ ArcGIS Workflow Manager (Classic) has been deprecated
-Learn more about the [deprecation of ArcGIS Workflow Manager (Classic)](https://support.esri.com/en-us/knowledge-base/arcgis-workflow-manager-classic-deprecation-000031190) and the new [service-based ArcGIS Workflow Manager](https://www.esri.com/en-us/arcgis/products/arcgis-workflow-manager/overview)
-
-## Workflow Manager-Samples
+# Workflow Manager-Samples
 
 Simple samples for Workflow Manager and Workflow Manager (Classic).
 
@@ -11,6 +8,10 @@ The [Workflow Manager Service-based samples](./ServiceBased) includes:
 * ArcGIS Pro Add-In sample which utilizes the Workflow Manager Pro SDK.
 
 ## Workflow Manager (Classic)
+
+### ⛔ ArcGIS Workflow Manager (Classic) has been deprecated
+Learn more about the [deprecation of ArcGIS Workflow Manager (Classic)](https://support.esri.com/en-us/knowledge-base/arcgis-workflow-manager-classic-deprecation-000031190) and the new [service-based ArcGIS Workflow Manager](https://www.esri.com/en-us/arcgis/products/arcgis-workflow-manager/overview)
+
 The [Workflow Manager (Classic) samples](./Classic) show you how to add different types of add ins and steps to your Workflow Manager desktop application.
 
 ## Issues
