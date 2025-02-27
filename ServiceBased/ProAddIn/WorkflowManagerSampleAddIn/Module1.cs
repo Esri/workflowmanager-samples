@@ -11,6 +11,7 @@ using ArcGIS.Desktop.Framework.Dialogs;
 using ArcGIS.Desktop.Framework.Threading.Tasks;
 using ArcGIS.Desktop.Layouts;
 using ArcGIS.Desktop.Mapping;
+using ArcGIS.Desktop.Workflow.Client.Steps;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,9 @@ namespace WorkflowManagerSampleAddIn
         /// Retrieve the singleton instance to this module here
         /// </summary>
         public static Module1 Current => _this ??= (Module1)FrameworkApplication.FindModule("WorkflowManagerSampleAddIn_Module");
+
+        // Store the jobId info from the Open Pro Project Items step execution
+        internal string JobId { get; private set; }
 
         #region Overrides
         /// <summary>
@@ -66,6 +70,42 @@ namespace WorkflowManagerSampleAddIn
             });
         }
 
+        /// <summary>
+        /// Override this method to allow execution of DAML commands specified in this module.
+        /// This is needed to run commands using the Open Pro Project Items step with arguments.
+        /// </summary>
+        /// <param name="id">The DAML control identifier.</param>
+        /// <returns>A user defined function, with arguments, that will execute asynchronously when invoked.</returns>
+        protected override Func<Object[], Task> ExecuteCommandArgs(string id)
+        {
+            return (object[] args) => RunCommand(id, args);
+        }
+
+        private Task RunCommand(string id, object[] args)
+        {
+            return QueuedTask.Run(() =>
+            {
+                try
+                {
+                    // Get the jobId property from the OpenProProjectItemsStep arguments and store it.
+                    OpenProProjectItemsStepCommandArgs stepArgs = (OpenProProjectItemsStepCommandArgs)args[0];
+                    JobId = stepArgs.JobId;
+                    // ArcGIS.Desktop.Framework.Dialogs.MessageBox.Show($"Got job id from ProMappingStep args: {JobId}", "Project Info");
+
+                    // Run the command specified by the id
+                    IPlugInWrapper wrapper = FrameworkApplication.GetPlugInWrapper(id);
+                    var command = wrapper as ICommand;
+                    if (command != null && command.CanExecute(null))
+                        command.Execute(null);
+                }
+                catch (System.Exception e)
+                {
+                    // ArcGIS.Desktop.Framework.Dialogs.MessageBox.Show($"ERROR: {e}", "Error running command");
+                }
+            });
+        }
+
         #endregion Overrides
+
     }
 }

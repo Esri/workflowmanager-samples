@@ -29,11 +29,35 @@ namespace WorkflowManagerSampleAddIn
 
             // Update the jobId and stepId information for your workflow item
             var jobId = "bX7L4B9KSpqwjbsMgfz0vQ";
-            var stepIds = new List<string> { "df4c8d20-5c99-457f-0be1-21fa8f830760" }; // Set one or more current steps
-            var stepIdStr = string.Join(",", stepIds);
+            var stepIds = new List<string>();
 
             QueuedTask.Run(() =>
             {
+                try
+                {
+                    // Get current steps on the job
+                    var job = jobsManager.GetJob(jobId);
+                    var currentSteps = job.CurrentSteps;
+                    if (currentSteps == null || currentSteps.Count < 1)
+                    {
+                        var title = "Failed Retrieving Current Step(s) on a Job";
+                        var msg = $"\nJobId: {jobId}\n";
+                        MessageBox.Show(msg, title);
+                        return;
+                    }
+
+                    stepIds.Add(currentSteps[0].StepId); // Set one or more current steps
+                }
+                catch (Exception ex)
+                {
+                    var title = "Failed Retrieving Current Step(s) on a Job";
+                    var msg = $"\nJobId: {jobId}\n"
+                        + $"\nError: {ex.Message}";
+                    MessageBox.Show(msg, title);
+                    return;
+                }
+
+                var stepIdStr = string.Join(",", stepIds);
                 try
                 {
                     // Run specific current steps on the job
