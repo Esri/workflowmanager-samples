@@ -7,12 +7,18 @@ This Jupyter Notebook sample will export an existing Workflow Manager Item, crea
 1. Ensure the requirements below are met on the machine where the notebook will be run.
 
 2. Download the `Workflow Manager - Import Export Items Asynchronously.ipynb` notebook.
+   
+3. Update the connection information in the sample.
 
-3. Run the notebook using ArcGIS Pro, in the Jupyter Notebook environment, or run in your IDE of choice.
+4. Run the notebook using ArcGIS Pro, in the Jupyter Notebook environment, or run in your IDE of choice.
 
 ## Requirements
 
 - ArcGIS API for Python >= 2.x
+
+## Compatibility
+
+- ArcGIS Online or ArcGIS Enterprise 12.0 or later
 
 ## Issues
 
