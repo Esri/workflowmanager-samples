@@ -13,6 +13,10 @@ These sample tools are script tools that utilize the Python API to perform vario
 * [Any](./Any/) - These tools are compatible with any version of ArcGIS Workflow Manager
    - The JobProgressCleanup script deletes extraneous internal records that can adversely impact Job search performance 
 
+* [Jupyter Notebooks](./JupyterNotebooks/) - Examples of using the Python API in Jupyter Notebooks
+ 
+   - [Import Export Workflow Items](./JupyterNotebooks/ImportExportWorkflowItems) - Export an existing Workflow Manager Item, create a new workflow item, then import the configuration to the newly created item in the same GIS.
+
 ## Pro Add-In Sample
 
 * [Pro Add-In](https://github.com/Esri/arcgis-pro-sdk-community-samples/tree/master/WorkflowManager/) - This Pro Add-In sample utilizes the Workflow Manager Pro SDK to perform various operations against the ArcGIS Workflow Manager workflow items.
