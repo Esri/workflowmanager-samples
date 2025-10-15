@@ -1,6 +1,7 @@
-# Workflow Manager-Samples
+# Workflow Manager (Classic) Samples
 
-Simple samples that show you how to add different types of add ins and steps to your Workflow Manager desktop application.
+### ⛔ ArcGIS Workflow Manager (Classic) has been deprecated
+Learn more about the [deprecation of ArcGIS Workflow Manager (Classic)](https://support.esri.com/en-us/knowledge-base/arcgis-workflow-manager-classic-deprecation-000031190) and the new [service-based ArcGIS Workflow Manager](https://www.esri.com/en-us/arcgis/products/arcgis-workflow-manager/overview)
 
 ## Features
 * [ClearAOIContextMenu](./ClearAOIContextMenu)
@@ -65,3 +66,4 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 A copy of the license is available in the repository's [License.txt](License.txt) file.
+
